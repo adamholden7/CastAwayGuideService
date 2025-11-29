@@ -14,49 +14,28 @@
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
 </head>
 <body>
-    <div class="top-bar">
-    <div class="container top-bar-inner">
-      <div class="top-bar-left">
-        <span class="top-bar-item">📞 <a href="tel:{{ site.data.client.phone }}">{{ site.data.client.phone }}</a></span>
-        <span class="top-bar-separator">•</span>
-        <span class="top-bar-item">✉️ <a href="mailto:{{ site.data.client.email }}">{{ site.data.client.email }}</a></span>
-      </div>
+      <div class="container top-bar-inner">
+    <div class="top-bar-left">
+      <span class="top-bar-item">
+        <span class="icon-phone">📞</span>
+        <a href="tel:{{ site.data.client.phone }}">{{ site.data.client.phone }}</a>
+      </span>
   
-      <div class="top-bar-right">
-        <a href="https://facebook.com" target="_blank" class="social-icon fb-icon" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-            <path d="M22 12c0-5.522-4.477-10-10-10S2 6.478 2 12c0 4.991 3.657 9.128 8.438 
-            9.878v-6.987H7.898v-2.89h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 
-            1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.772-1.63 
-            1.562v1.874h2.773l-.443 2.89h-2.33V21.88C18.343 21.128 22 
-            16.99 22 12"></path>
-          </svg>
-        </a>
+      <span class="top-bar-separator">•</span>
   
-        <a href="https://instagram.com" target="_blank" class="social-icon ig-icon" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-            <path d="M12 2.2c3.2 0 3.584.012 4.85.07 1.17.054 1.97.24 
-            2.43.403a4.9 4.9 0 0 1 1.77 1.153 4.9 4.9 0 0 1 1.152 
-            1.77c.163.46.35 1.26.404 2.43.058 1.267.07 1.652.07 
-            4.853s-.012 3.585-.07 4.85c-.054 1.17-.24 1.97-.404 
-            2.43a4.9 4.9 0 0 1-1.153 1.77 4.9 4.9 0 0 1-1.77 
-            1.152c-.46.163-1.26.35-2.43.404-1.267.058-1.652.07-4.853.07s-3.585-.012-4.85-.07c-1.17-.054-1.97-.24-2.43-.404a4.9 
-            4.9 0 0 1-1.77-1.153 4.9 4.9 0 0 1-1.152-1.77c-.163-.46-.35-1.26-.404-2.43C2.212 
-            15.586 2.2 15.2 2.2 12s.012-3.585.07-4.85c.054-1.17.24-1.97.404-2.43A4.9 
-            4.9 0 0 1 3.827 2.95 4.9 4.9 0 0 1 5.596 1.8c.46-.163 1.26-.35 
-            2.43-.404C8.29 1.338 8.675 1.326 11.877 1.326 15.078 1.326 15.464 
-            1.338 16.73 1.396c1.17.054 1.97.24 2.43.404a4.9 4.9 0 0 1 1.77 
-            1.153 4.9 4.9 0 0 1 1.152 1.77c.163.46.35 1.26.404 
-            2.43.058 1.267.07 1.652.07 4.853s-.012 3.585-.07 
-            4.85c-.054 1.17-.24 1.97-.404 2.43a4.9 4.9 0 0 1-1.153 
-            1.77 4.9 4.9 0 0 1-1.77 1.152c-.46.163-1.26.35-2.43.404C15.585 
-            22.664 15.2 22.676 12 22.676c-3.201 0-3.585-.012-4.85-.07-1.17-.054-1.97-.24-2.43-.404a4.9 
-            4.9 0 0 1-1.77-1.152A4.9 4.9 0 0 1 1.8 18.73c-.163-.46-.35-1.26-.404-2.43C1.338 
-            15.078 1.326 14.693 1.326 11.49s.012-3.585.07-4.85z"></path>
-            <circle cx="11.99" cy="12" r="3.2"></circle>
-          </svg>
-        </a>
-      </div>
+      <span class="top-bar-item">
+        <span class="icon-email">✉️</span>
+        <a href="mailto:{{ site.data.client.email }}">{{ site.data.client.email }}</a>
+      </span>
+    </div>
+  
+    <div class="top-bar-right">
+      <a href="https://facebook.com" class="social-icon" aria-label="Facebook">
+        <img src="{{ '/assets/icons/facebook.svg' | relative_url }}" alt="Facebook" />
+      </a>
+      <a href="https://instagram.com" class="social-icon" aria-label="Instagram">
+        <img src="{{ '/assets/icons/instagram.svg' | relative_url }}" alt="Instagram" />
+      </a>
     </div>
   </div>
 
