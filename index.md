@@ -28,32 +28,59 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
   </div>
 </section>
 
-<section id="about" class="section">
-  <div class="container grid-2">
-    <div class="about-text">
-      <h2>About {{ site.data.client.business_name | default: "Your Guide" }}</h2>
+<section id="about" class="section section-light">
+  <div class="container guide-layout">
+    <div class="guide-photo-card">
+      <img src="{{ '/assets/images/guide-portrait.jpg' | relative_url }}" alt="Brock Haugrud on the Brule River" />
+      <div class="guide-badge">
+        <p class="guide-badge-title">Licensed &amp; Insured</p>
+        <p class="guide-badge-text">Professional guide services since 2018</p>
+      </div>
+    </div>
+
+    <div class="guide-content">
+      <p class="eyebrow">Meet Your Guide</p>
+      <h2 class="guide-title">Brock Haugrud</h2>
+
       <p>
-        Hey, I’m <strong>{{ site.data.client.owner_name | default: "Your Guide" }}</strong> — based in
-        {{ site.data.client.location | default: "your local area" }}. I’ve spent years learning this water in every season,
-        chasing fish from the headwaters to the lower stretches.
+        I grew up fishing the Brule and never really left. What started as
+        weekend missions with friends turned into a full-time obsession with this
+        river—its seasons, its moods, and the way it fishes on any given day.
       </p>
       <p>
-        Whether it’s your first time with a fly rod or you’re a seasoned angler hunting a personal best,
-        I’ll dial in a day tailored to your goals, conditions, and comfort level.
+        Whether you’re just picking up a fly rod or you’ve been chasing trout for
+        decades, my goal is the same: a relaxed, dialed-in day on the water where
+        you learn something, laugh a lot, and remember the fish and the moments.
       </p>
-      <ul class="feature-list">
+      <p>
+        From cold spring steelhead to late-summer dry fly evenings, I’ll handle the
+        details so you can just fish, learn, and enjoy the Brule.
+      </p>
+
+      <ul class="guide-features">
         <li>Licensed &amp; insured Wisconsin guide</li>
-        <li>Drift boat &amp; walk-and-wade trips</li>
+        <li>Drift boat &amp; walk-and-wade options</li>
         <li>Patient instruction &amp; river safety first</li>
       </ul>
-    </div>
-    <div class="about-media">
-      <div class="about-card">
-        <img src="{{ '/assets/images/guide-portrait.jpg' | relative_url }}" alt="Guide on the water" />
+
+      <div class="guide-stats">
+        <div class="guide-stat">
+          <span class="guide-stat-number">7+</span>
+          <span class="guide-stat-label">Years Guiding</span>
+        </div>
+        <div class="guide-stat">
+          <span class="guide-stat-number">500+</span>
+          <span class="guide-stat-label">Days on the Brule</span>
+        </div>
+        <div class="guide-stat">
+          <span class="guide-stat-number">1–2</span>
+          <span class="guide-stat-label">Anglers per Trip</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
 
 {% if site.data.client.show_trips != false and site.data.client.business_type == "guide" %}
 <section id="trips" class="section section-hero-bg">
