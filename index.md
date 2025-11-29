@@ -1,20 +1,24 @@
 ---
 layout: default
 title: Home
-description: Guided fly fishing trips on Wisconsin's Brule River – half-day and full-day adventures with a local guide.
+description: {{ site.data.client.tagline | default: "Guided fly fishing trips on Wisconsin's Brule River – half-day and full-day adventures with a local guide." }}
 ---
 
 <section id="hero" class="hero">
   <div class="hero-overlay"></div>
   <div class="container hero-content">
-    <p class="eyebrow">Guided Fly Fishing • Brule River, WI</p>
-    <h1>Chase Wild Trout on the Legendary Brule</h1>
+    <p class="eyebrow">
+      {{ site.data.client.tagline | default: "Guided fly fishing trips on Wisconsin's Brule River." }}
+    </p>
+    <h1>{{ site.data.client.hero_headline | default: "Chase Wild Trout on the Legendary Brule" }}</h1>
     <p class="hero-text">
-      Custom half-day and full-day fly fishing trips with a local guide who knows every bend, riffle, and run.
+      {{ site.data.client.hero_subtext | default: "Custom half-day and full-day fly fishing trips with a local guide who knows every bend, riffle, and run." }}
     </p>
     <div class="hero-actions">
       <a href="#contact" class="btn btn-primary">Book a Trip</a>
+      {% if site.data.client.show_trips != false %}
       <a href="#trips" class="btn btn-ghost">View Trips &amp; Rates</a>
+      {% endif %}
     </div>
     <div class="hero-meta">
       <span>‣ Walk-and-wade &amp; drift boat options</span>
@@ -27,11 +31,11 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
 <section id="about" class="section">
   <div class="container grid-2">
     <div class="about-text">
-      <h2>Your Guide to the Brule</h2>
+      <h2>About {{ site.data.client.business_name | default: "Your Guide" }}</h2>
       <p>
-        Hey, I’m <strong>Brock</strong> — born and raised near the Brule. I’ve spent the last
-        7 years learning this river in every season, chasing browns, brookies, and steelhead
-        from the headwaters to Lake Superior.
+        Hey, I’m <strong>{{ site.data.client.owner_name | default: "Your Guide" }}</strong> — based in
+        {{ site.data.client.location | default: "your local area" }}. I’ve spent years learning this water in every season,
+        chasing fish from the headwaters to the lower stretches.
       </p>
       <p>
         Whether it’s your first time with a fly rod or you’re a seasoned angler hunting a personal best,
@@ -45,12 +49,13 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
     </div>
     <div class="about-media">
       <div class="about-card">
-        <img src="{{ site.baseurl }}/images/guide-portrait.jpg" alt="Fly fishing guide on the Brule River" />
+        <img src="{{ '/images/guide-portrait.jpg' | relative_url }}" alt="Guide on the water" />
       </div>
     </div>
   </div>
 </section>
 
+{% if site.data.client.show_trips != false and site.data.client.business_type == "guide" %}
 <section id="trips" class="section section-alt">
   <div class="container">
     <header class="section-header">
@@ -102,31 +107,32 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
     </div>
   </div>
 </section>
+{% endif %}
 
 <section id="river" class="section">
   <div class="container grid-2">
     <div>
-      <h2>The Brule River</h2>
+      <h2>The Water</h2>
       <p>
-        The Bois Brule River is one of the Midwest’s most storied trout and steelhead fisheries — a cold, spring-fed
-        river flowing through deep forest before reaching Lake Superior.
+        The local water here is a classic fishery — cold, clean, and full of structure that fish love.
+        From pocket water and riffles to deep pools, there’s always something to explore.
       </p>
       <p>
-        From delicate dry-fly fishing in summer to powerful steelhead in the fall and spring, there’s always something
-        happening on the Brule.
+        From delicate dry-fly fishing in summer to powerful runs in the fall and spring, there’s always something
+        happening out here.
       </p>
       <ul class="feature-list">
         <li>Wild and stocked trout</li>
-        <li>Steelhead runs (spring &amp; fall)</li>
+        <li>Seasonal runs and special windows</li>
         <li>Classic Northwoods scenery</li>
       </ul>
     </div>
     <div class="river-panel">
       <h3>Seasonal Highlights</h3>
       <ul class="season-list">
-        <li><span>April–May:</span> Spring steelhead &amp; early hatches</li>
-        <li><span>June–August:</span> Dry flies, terrestrials &amp; evening floats</li>
-        <li><span>September–November:</span> Fall colors &amp; steelhead</li>
+        <li><span>April–May:</span> Spring fish &amp; early hatches</li>
+        <li><span>June–August:</span> Dry flies, terrestrials &amp; evening trips</li>
+        <li><span>September–November:</span> Fall colors &amp; big fish</li>
       </ul>
       <p class="river-note">
         For current conditions and availability, reach out and I’ll let you know what’s fishing best.
@@ -135,62 +141,75 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
   </div>
 </section>
 
+{% if site.data.client.show_gallery != false %}
 <section id="gallery" class="section section-alt">
   <div class="container">
     <header class="section-header">
       <h2>On the Water</h2>
-      <p>A few moments from recent days on the Brule.</p>
+      <p>A few moments from recent days out here.</p>
     </header>
     <div class="gallery-grid">
       <figure class="gallery-item">
-        <img src="{{ site.baseurl }}/images/gallery-1.jpg" alt="Angler landing a trout on the Brule River" />
+        <img src="{{ '/images/gallery-1.jpg' | relative_url }}" alt="Angler landing a fish" />
       </figure>
       <figure class="gallery-item">
-        <img src="{{ site.baseurl }}/images/gallery-2.jpg" alt="Drift boat on a misty morning" />
+        <img src="{{ '/images/gallery-2.jpg' | relative_url }}" alt="Boat on a misty morning" />
       </figure>
       <figure class="gallery-item">
-        <img src="{{ site.baseurl }}/images/gallery-3.jpg" alt="Close-up of a wild brown trout" />
+        <img src="{{ '/images/gallery-3.jpg' | relative_url }}" alt="Close-up of a fish" />
       </figure>
       <figure class="gallery-item">
-        <img src="{{ site.baseurl }}/images/gallery-4.jpg" alt="Brule River at sunset through the pines" />
+        <img src="{{ '/images/gallery-4.jpg' | relative_url }}" alt="River at sunset through the trees" />
       </figure>
     </div>
   </div>
 </section>
+{% endif %}
 
+{% if site.data.client.show_testimonials != false %}
 <section class="section">
   <div class="container">
     <header class="section-header">
-      <h2>What Anglers Are Saying</h2>
+      <h2>What Clients Are Saying</h2>
     </header>
     <div class="card-grid testimonials">
       <article class="card testimonial">
-        <p>“Hands down the best day I’ve had on the Brule. Learned a ton and landed my biggest brown yet.”</p>
+        <p>“Hands down the best day I’ve had on the water. Learned a ton and landed my biggest fish yet.”</p>
         <span class="testimonial-name">— Alex M.</span>
       </article>
       <article class="card testimonial">
-        <p>“Patient, dialed-in, and fun to fish with. Perfect for my son’s first fly fishing trip.”</p>
+        <p>“Patient, dialed-in, and fun to be around. Perfect for my son’s first trip.”</p>
         <span class="testimonial-name">— Jamie R.</span>
       </article>
       <article class="card testimonial">
-        <p>“Knows where the fish are and explains the ‘why’ behind every move. I’ll be back every fall.”</p>
+        <p>“Knows where the fish are and explains the ‘why’ behind every move. I’ll be back every season.”</p>
         <span class="testimonial-name">— Chris D.</span>
       </article>
     </div>
   </div>
 </section>
+{% endif %}
 
+{% if site.data.client.show_booking_form != false %}
 <section id="contact" class="section section-accent">
   <div class="container grid-2">
     <div>
-      <h2>Book Your Day on the Brule</h2>
+      <h2>Book Your Day</h2>
       <p>
         Tell me what kind of trip you’re interested in, your preferred dates, and your experience level.
         I’ll get back to you with availability and details.
       </p>
       <div class="contact-details">
-        <p><strong>Email:</strong> <a href="mailto:info@castawayguide.com">info@castawayguide.com</a></p>
-        <p><strong>Phone:</strong> <a href="tel:+1-218-591-2604">(218) 591-2604</a></p>
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:{{ site.data.client.email }}">{{ site.data.client.email }}</a>
+        </p>
+        <p>
+          <strong>Phone:</strong>
+          <a href="tel:{{ site.data.client.phone | replace: '(', '' | replace: ')', '' | replace: ' ', '' | replace: '-', '' }}">
+            {{ site.data.client.phone }}
+          </a>
+        </p>
       </div>
     </div>
     <form class="contact-form">
@@ -214,9 +233,10 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
       </div>
       <div class="form-row">
         <label for="message">Trip Details</label>
-        <textarea id="message" name="message" rows="4" placeholder="Tell me about your ideal day on the Brule..."></textarea>
+        <textarea id="message" name="message" rows="4" placeholder="Tell me about your ideal day on the water..."></textarea>
       </div>
       <button type="submit" class="btn btn-primary btn-block">Send Inquiry</button>
     </form>
   </div>
 </section>
+{% endif %}
