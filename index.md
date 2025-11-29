@@ -28,58 +28,75 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
   </div>
 </section>
 
-<section id="about" class="section section-light">
-  <div class="container guide-layout">
-    <div class="guide-photo-card">
-      <img src="{{ '/assets/images/guide-portrait.jpg' | relative_url }}" alt="Brock Haugrud on the Brule River" />
-      <div class="guide-badge">
-        <p class="guide-badge-title">Licensed &amp; Insured</p>
-        <p class="guide-badge-text">Professional guide services since 2018</p>
+<section id="about" class="section section-about">
+  <div class="container about-grid">
+    <!-- Image side -->
+    <div class="about-image-wrap">
+      <div class="about-image-frame">
+        <img
+          src="{{ '/assets/images/guide-portrait.jpg' | relative_url }}"
+          alt="Brock Haugrud on the Brule River"
+        />
+      </div>
+
+      <!-- Accent card -->
+      <div class="about-accent-card">
+        <p class="about-accent-title">Licensed &amp; Insured</p>
+        <p class="about-accent-text">Professional guide services since 2018</p>
       </div>
     </div>
 
-    <div class="guide-content">
-      <p class="eyebrow">Meet Your Guide</p>
-      <h2 class="guide-title">Brock Haugrud</h2>
+    <!-- Content side -->
+    <div class="about-copy">
+      <p class="eyebrow eyebrow-accent">Meet Your Guide</p>
+      <h2 class="about-heading">Brock Haugrud</h2>
 
-      <p>
-        I grew up fishing the Brule and never really left. What started as
-        weekend missions with friends turned into a full-time obsession with this
-        river—its seasons, its moods, and the way it fishes on any given day.
-      </p>
-      <p>
-        Whether you’re just picking up a fly rod or you’ve been chasing trout for
-        decades, my goal is the same: a relaxed, dialed-in day on the water where
-        you learn something, laugh a lot, and remember the fish and the moments.
-      </p>
-      <p>
-        From cold spring steelhead to late-summer dry fly evenings, I’ll handle the
-        details so you can just fish, learn, and enjoy the Brule.
-      </p>
+      <div class="about-body">
+        <p>
+          Growing up fishing the Brule, I’ve spent years learning its
+          secrets in every season. What started as weekend trips with friends
+          turned into a full-time obsession with this river—its moods, its
+          hatches, and how it fishes on any given day.
+        </p>
+        <p>
+          My goal on every trip is simple: a relaxed, dialed-in day where you
+          learn something new, laugh a lot, and remember both the fish and the
+          moments. Whether you’re picking up a fly rod for the first time or
+          chasing a personal-best steelhead, I’ll build the day around you.
+        </p>
+        <p>
+          The Brule is more than just water to me—it’s home. I’d love to share
+          my favorite stretches, stories, and seasons with you.
+        </p>
+      </div>
 
-      <ul class="guide-features">
-        <li>Licensed &amp; insured Wisconsin guide</li>
-        <li>Drift boat &amp; walk-and-wade options</li>
-        <li>Patient instruction &amp; river safety first</li>
-      </ul>
-
-      <div class="guide-stats">
-        <div class="guide-stat">
-          <span class="guide-stat-number">7+</span>
-          <span class="guide-stat-label">Years Guiding</span>
+      <!-- Stats -->
+      <div class="about-stats">
+        <div class="about-stat">
+          <div class="about-stat-icon">🎣</div>
+          <p class="about-stat-value">7+</p>
+          <p class="about-stat-label">Years Guiding</p>
         </div>
-        <div class="guide-stat">
-          <span class="guide-stat-number">500+</span>
-          <span class="guide-stat-label">Days on the Brule</span>
+        <div class="about-stat">
+          <div class="about-stat-icon">🙂</div>
+          <p class="about-stat-value">200+</p>
+          <p class="about-stat-label">Happy Anglers</p>
         </div>
-        <div class="guide-stat">
-          <span class="guide-stat-number">1–2</span>
-          <span class="guide-stat-label">Anglers per Trip</span>
+        <div class="about-stat">
+          <div class="about-stat-icon">🗺️</div>
+          <p class="about-stat-value">50+</p>
+          <p class="about-stat-label">River Miles</p>
+        </div>
+        <div class="about-stat">
+          <div class="about-stat-icon">✔️</div>
+          <p class="about-stat-value">Fully</p>
+          <p class="about-stat-label">Licensed &amp; Insured</p>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 
 
 {% if site.data.client.show_trips != false and site.data.client.business_type == "guide" %}
