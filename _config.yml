@@ -2,7 +2,7 @@ title: Brule River Fly Fishing Guide
 description: Guided fly fishing trips on Wisconsin's legendary Brule River.
 # If this is a *project* site (e.g. username.github.io/brule-guide), set baseurl to "/brule-guide".
 # If this is a *user* site (username.github.io), leave baseurl as "".
-baseurl: "/brule-guide"
+baseurl: "/CastAwayGuideService"
 url: "https://adamholden7.github.io"
 theme: null
 markdown: kramdown
