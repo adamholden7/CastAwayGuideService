@@ -245,43 +245,111 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
 </section> -->
 
 {% if site.data.client.show_testimonials != false %}
-<section id="testimonials" class="section testimonials-section">
+<section id="testimonials" class="section section-testimonials">
   <div class="container">
-    <header class="section-header">
-      <h2>What Clients Are Saying</h2>
+    <header class="section-header section-header-tight">
+      <p class="section-eyebrow">Happy Anglers</p>
+      <h2>What Clients Say</h2>
+      <p class="section-subtitle">
+        A few words from anglers who’ve spent a day on the Brule.
+      </p>
     </header>
 
-    <div class="card-grid testimonials">
-
+    <div class="testimonials-grid">
+      <!-- Testimonial 1 -->
       <article class="testimonial-card">
-        <img class="testimonial-img" src="{{ '/assets/images/gallery-1.jpg' | relative_url }}" alt="Client holding a fish on the Brule">
-        <div class="testimonial-body">
-          <p>“Hands down the best day I’ve had on the water. Learned a ton and landed my biggest fish yet.”</p>
-          <span class="testimonial-name">— Alex M.</span>
+        <div class="testimonial-top">
+          <div class="testimonial-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <div class="testimonial-quote-icon">❝</div>
+        </div>
+
+        <p class="testimonial-text">
+          "Hands down the best day I've had on the water. Learned a ton and landed
+          my biggest fish yet."
+        </p>
+
+        <div class="testimonial-footer">
+          <div class="testimonial-avatar">
+            <img src="{{ '/assets/images/testimonial-1.jpg' | relative_url }}" alt="Alex M.">
+          </div>
+          <div class="testimonial-meta">
+            <p class="testimonial-name">Alex M.</p>
+            <p class="testimonial-location">Minneapolis, MN</p>
+            <p class="testimonial-trip">Full Day Float Trip</p>
+          </div>
         </div>
       </article>
 
+      <!-- Testimonial 2 -->
       <article class="testimonial-card">
-        <img class="testimonial-img" src="{{ '/assets/images/gallery-2.jpg' | relative_url }}" alt="Client landing a steelhead">
-        <div class="testimonial-body">
-          <p>“Patient, dialed-in, and fun to be around. Perfect for my son’s first trip.”</p>
-          <span class="testimonial-name">— Jamie R.</span>
+        <div class="testimonial-top">
+          <div class="testimonial-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <div class="testimonial-quote-icon">❝</div>
+        </div>
+
+        <p class="testimonial-text">
+          "Patient, dialed-in, and fun to be around. Perfect for my son's first trip."
+        </p>
+
+        <div class="testimonial-footer">
+          <div class="testimonial-avatar">
+            <img src="{{ '/assets/images/testimonial-2.jpg' | relative_url }}" alt="Jamie R.">
+          </div>
+          <div class="testimonial-meta">
+            <p class="testimonial-name">Jamie R.</p>
+            <p class="testimonial-location">Duluth, MN</p>
+            <p class="testimonial-trip">Half Day Wade Trip</p>
+          </div>
         </div>
       </article>
 
+      <!-- Testimonial 3 -->
       <article class="testimonial-card">
-        <img class="testimonial-img" src="{{ '/assets/images/gallery-3.jpg' | relative_url }}" alt="Client with a fall steelhead">
-        <div class="testimonial-body">
-          <p>“Knows where the fish are and explains the ‘why’ behind every move. I’ll be back every season.”</p>
-          <span class="testimonial-name">— Chris D.</span>
+        <div class="testimonial-top">
+          <div class="testimonial-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <div class="testimonial-quote-icon">❝</div>
+        </div>
+
+        <p class="testimonial-text">
+          "Knows where the fish are and explains the 'why' behind every move. I'll be back every season."
+        </p>
+
+        <div class="testimonial-footer">
+          <div class="testimonial-avatar">
+            <img src="{{ '/assets/images/testimonial-3.jpg' | relative_url }}" alt="Chris D.">
+          </div>
+          <div class="testimonial-meta">
+            <p class="testimonial-name">Chris D.</p>
+            <p class="testimonial-location">Madison, WI</p>
+            <p class="testimonial-trip">Evening Hatch Trip</p>
+          </div>
         </div>
       </article>
+    </div>
 
+    <div class="testimonial-trust-row">
+      <div class="trust-item">
+        <span class="trust-label">Orvis</span>
+        <span class="trust-subtext">Endorsed Guide</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-label">4.9★</span>
+        <span class="trust-subtext">Google Reviews</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-label">TripAdvisor</span>
+        <span class="trust-subtext">Excellence Award</span>
+      </div>
     </div>
   </div>
 </section>
 {% endif %}
-
 
 {% if site.data.client.show_booking_form != false %}
 <section id="contact" class="section section-accent">
