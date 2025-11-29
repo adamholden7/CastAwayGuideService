@@ -352,52 +352,160 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
 {% endif %}
 
 {% if site.data.client.show_booking_form != false %}
-<section id="contact" class="section section-accent">
-  <div class="container grid-2">
-    <div>
-      <h2>Book Your Day</h2>
-      <p>
-        Tell me what kind of trip you’re interested in, your preferred dates, and your experience level.
-        I’ll get back to you with availability and details.
+<section id="booking" class="section section-booking">
+  <div class="container">
+    <header class="section-header section-header-tight">
+      <p class="section-eyebrow">Ready to fish?</p>
+      <h2 class="about-heading">Book Your Adventure</h2>
+      <p class="section-subtitle">
+        Select an available date and fill out the form below. I’ll get back to you within
+        24 hours to confirm your trip.
       </p>
-      <div class="contact-details">
-        <p>
-          <strong>Email:</strong>
-          <a href="mailto:{{ site.data.client.email }}">{{ site.data.client.email }}</a>
-        </p>
-        <p>
-          <strong>Phone:</strong>
-          <a href="tel:{{ site.data.client.phone | replace: '(', '' | replace: ')', '' | replace: ' ', '' | replace: '-', '' }}">
-            {{ site.data.client.phone }}
-          </a>
-        </p>
+    </header>
+
+    <div class="booking-grid">
+      <!-- Calendar side -->
+      <div class="booking-card">
+        <h3 class="booking-card-title">Check Availability</h3>
+
+        <div class="booking-calendar-header">
+          <button type="button" class="calendar-nav" aria-label="Previous month">‹</button>
+          <span class="calendar-month">November 2025</span>
+          <button type="button" class="calendar-nav" aria-label="Next month">›</button>
+        </div>
+
+        <div class="booking-calendar">
+          <div class="calendar-row calendar-weekdays">
+            <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span>
+            <span>Thu</span><span>Fri</span><span>Sat</span>
+          </div>
+
+          <!-- This is just a static mock. You can adjust days as you like. -->
+          <div class="calendar-row">
+            <span class="calendar-day is-muted"></span>
+            <span class="calendar-day is-muted"></span>
+            <span class="calendar-day is-muted"></span>
+            <span class="calendar-day is-muted"></span>
+            <span class="calendar-day is-muted"></span>
+            <span class="calendar-day">1</span>
+            <span class="calendar-day">2</span>
+          </div>
+
+          <div class="calendar-row">
+            <span class="calendar-day">3</span><span class="calendar-day">4</span>
+            <span class="calendar-day">5</span><span class="calendar-day">6</span>
+            <span class="calendar-day">7</span><span class="calendar-day">8</span>
+            <span class="calendar-day is-unavailable">9</span>
+          </div>
+
+          <div class="calendar-row">
+            <span class="calendar-day is-unavailable">10</span>
+            <span class="calendar-day">11</span><span class="calendar-day">12</span>
+            <span class="calendar-day">13</span><span class="calendar-day">14</span>
+            <span class="calendar-day">15</span><span class="calendar-day">16</span>
+          </div>
+
+          <div class="calendar-row">
+            <span class="calendar-day">17</span><span class="calendar-day">18</span>
+            <span class="calendar-day">19</span><span class="calendar-day">20</span>
+            <span class="calendar-day">21</span><span class="calendar-day">22</span>
+            <span class="calendar-day">23</span>
+          </div>
+
+          <div class="calendar-row">
+            <span class="calendar-day">24</span><span class="calendar-day">25</span>
+            <span class="calendar-day">26</span><span class="calendar-day">27</span>
+            <span class="calendar-day">28</span>
+            <span class="calendar-day is-available is-selected">29</span>
+            <span class="calendar-day is-unavailable">30</span>
+          </div>
+        </div>
+
+        <div class="calendar-legend">
+          <span><span class="legend-dot is-available"></span>Available</span>
+          <span><span class="legend-dot is-unavailable"></span>Unavailable</span>
+        </div>
+      </div>
+
+      <!-- Form side -->
+      <div class="booking-card">
+        <h3 class="booking-card-title">Request a Trip</h3>
+
+        <form class="booking-form">
+          <div class="form-row-inline">
+            <div class="form-row">
+              <label for="name">Full Name *</label>
+              <input id="name" name="name" required />
+            </div>
+            <div class="form-row">
+              <label for="email">Email *</label>
+              <input id="email" name="email" type="email" required />
+            </div>
+          </div>
+
+          <div class="form-row-inline">
+            <div class="form-row">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" />
+            </div>
+            <div class="form-row">
+              <label for="group-size">Number of Anglers *</label>
+              <select id="group-size" name="group-size" required>
+                <option value="">Select</option>
+                <option value="1">1 angler</option>
+                <option value="2">2 anglers</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row-inline">
+            <div class="form-row">
+              <label for="trip-type">Trip Type *</label>
+              <select id="trip-type" name="trip-type" required>
+                <option value="">Select trip</option>
+                <option value="half-day">Half Day Wade Trip</option>
+                <option value="full-day">Full Day Float Trip</option>
+                <option value="evening">Evening Hatch Trip</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="experience">Experience Level</label>
+              <select id="experience" name="experience">
+                <option value="">Select level</option>
+                <option value="first-time">First time</option>
+                <option value="some">Some experience</option>
+                <option value="experienced">Experienced</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="date">Preferred Date</label>
+            <input id="date" name="date" type="date" />
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message / Special Requests</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Tell me about your goals for the trip, any special occasions, or questions you have..."
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary booking-submit">
+            <span>Send Request</span>
+          </button>
+
+          <p class="booking-note">
+            I typically respond within 24 hours. A 50% deposit is required to confirm
+            your date; remaining balance is due on the day of your trip.
+          </p>
+        </form>
       </div>
     </div>
-    <form class="contact-form">
-      <div class="form-row">
-        <label for="name">Name</label>
-        <input id="name" name="name" required />
-      </div>
-      <div class="form-row">
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" required />
-      </div>
-      <div class="form-row form-row-inline">
-        <div>
-          <label for="date">Preferred Date</label>
-          <input id="date" name="date" type="date" />
-        </div>
-        <div>
-          <label for="group-size">Group Size</label>
-          <input id="group-size" name="group-size" type="number" min="1" max="4" />
-        </div>
-      </div>
-      <div class="form-row">
-        <label for="message">Trip Details</label>
-        <textarea id="message" name="message" rows="4" placeholder="Tell me about your ideal day on the water..."></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary btn-block">Send Inquiry</button>
-    </form>
   </div>
 </section>
 {% endif %}
+
