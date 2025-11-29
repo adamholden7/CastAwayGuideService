@@ -111,128 +111,109 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
       </p>
     </header>
 
+    <section id="trips" class="section section-trips">
+  <div class="container">
+    <header class="section-header">
+      <p class="section-eyebrow">Guided Experiences</p>
+      <h2>Trips &amp; Rates</h2>
+      <p class="section-subtitle">
+        Choose the experience that fits your schedule. All trips include quality
+        Sage and Orvis equipment, hand-tied flies, and expert instruction.
+      </p>
+    </header>
+
     <div class="trips-grid">
+
       <!-- Trip 1 -->
       <article class="trip-card">
-        <div class="trip-image-wrap">
-          <img
-            src="{{ '/assets/images/trip-halfday.jpg' | relative_url }}"
-            alt="Angler wading the Brule River"
-            class="trip-image"
-          />
-          <div class="trip-image-gradient"></div>
+        <h3 class="trip-title">Half Day Wade Trip</h3>
+
+        <div class="trip-meta">
+          <span class="trip-meta-item">
+            <span class="trip-meta-icon">⏱</span> 4 Hours
+          </span>
+          <span class="trip-meta-item">
+            <span class="trip-meta-icon">👥</span> 1–2 Anglers
+          </span>
         </div>
 
-        <div class="trip-body">
-          <h3 class="trip-title">Half Day Wade Trip</h3>
+        <ul class="trip-features">
+          <li><span class="trip-check">✓</span> All equipment provided</li>
+          <li><span class="trip-check">✓</span> Flies included</li>
+          <li><span class="trip-check">✓</span> Instruction available</li>
+          <li><span class="trip-check">✓</span> Shore lunch</li>
+        </ul>
 
-          <div class="trip-meta">
-            <span class="trip-meta-item">
-              <span class="trip-meta-icon">⏱</span> 4 Hours
-            </span>
-            <span class="trip-meta-item">
-              <span class="trip-meta-icon">👥</span> 1–2 Anglers
-            </span>
+        <div class="trip-footer">
+          <div>
+            <p class="trip-price-label">Starting at</p>
+            <p class="trip-price">$325</p>
           </div>
-
-          <ul class="trip-features">
-            <li><span class="trip-check">✓</span> All equipment provided</li>
-            <li><span class="trip-check">✓</span> Flies included</li>
-            <li><span class="trip-check">✓</span> Instruction available</li>
-            <li><span class="trip-check">✓</span> Shore lunch</li>
-          </ul>
-
-          <div class="trip-footer">
-            <div>
-              <p class="trip-price-label">Starting at</p>
-              <p class="trip-price">$325</p>
-            </div>
-            <a href="#contact" class="btn btn-primary trip-btn">Book Now</a>
-          </div>
+          <a href="#contact" class="btn btn-primary trip-btn">Book Now</a>
         </div>
       </article>
 
       <!-- Trip 2 (Most Popular) -->
       <article class="trip-card trip-card-popular">
-        <div class="trip-image-wrap">
-          <img
-            src="{{ '/assets/images/trip-fullday.jpg' | relative_url }}"
-            alt="Guide rowing a drift boat on the Brule"
-            class="trip-image"
-          />
-          <div class="trip-image-gradient"></div>
-          <div class="trip-badge">Most Popular</div>
+        <div class="trip-badge">Most Popular</div>
+
+        <h3 class="trip-title">Full Day Float Trip</h3>
+
+        <div class="trip-meta">
+          <span class="trip-meta-item">
+            <span class="trip-meta-icon">⏱</span> 8 Hours
+          </span>
+          <span class="trip-meta-item">
+            <span class="trip-meta-icon">👥</span> 1–2 Anglers
+          </span>
         </div>
 
-        <div class="trip-body">
-          <h3 class="trip-title">Full Day Float Trip</h3>
+        <ul class="trip-features">
+          <li><span class="trip-check">✓</span> Drift boat included</li>
+          <li><span class="trip-check">✓</span> All equipment provided</li>
+          <li><span class="trip-check">✓</span> Gourmet streamside lunch</li>
+          <li><span class="trip-check">✓</span> Premium flies</li>
+          <li><span class="trip-check">✓</span> Best value</li>
+        </ul>
 
-          <div class="trip-meta">
-            <span class="trip-meta-item">
-              <span class="trip-meta-icon">⏱</span> 8 Hours
-            </span>
-            <span class="trip-meta-item">
-              <span class="trip-meta-icon">👥</span> 1–2 Anglers
-            </span>
+        <div class="trip-footer">
+          <div>
+            <p class="trip-price-label">Starting at</p>
+            <p class="trip-price">$550</p>
           </div>
-
-          <ul class="trip-features">
-            <li><span class="trip-check">✓</span> Drift boat included</li>
-            <li><span class="trip-check">✓</span> All equipment provided</li>
-            <li><span class="trip-check">✓</span> Gourmet streamside lunch</li>
-            <li><span class="trip-check">✓</span> Premium flies</li>
-            <li><span class="trip-check">✓</span> Best value</li>
-          </ul>
-
-          <div class="trip-footer">
-            <div>
-              <p class="trip-price-label">Starting at</p>
-              <p class="trip-price">$550</p>
-            </div>
-            <a href="#contact" class="btn btn-primary trip-btn trip-btn-popular">Book Now</a>
-          </div>
+          <a href="#contact" class="btn btn-primary trip-btn trip-btn-popular">Book Now</a>
         </div>
       </article>
 
       <!-- Trip 3 -->
       <article class="trip-card">
-        <div class="trip-image-wrap">
-          <img
-            src="{{ '/assets/images/trip-evening.jpg' | relative_url }}"
-            alt="Anglers fishing an evening hatch"
-            class="trip-image"
-          />
-          <div class="trip-image-gradient"></div>
+        <h3 class="trip-title">Evening Hatch Trip</h3>
+
+        <div class="trip-meta">
+          <span class="trip-meta-item">
+            <span class="trip-meta-icon">⏱</span> 3 Hours
+          </span>
+          <span class="trip-meta-item">
+            <span class="trip-meta-icon">👥</span> 1–2 Anglers
+          </span>
         </div>
 
-        <div class="trip-body">
-          <h3 class="trip-title">Evening Hatch Trip</h3>
+        <ul class="trip-features">
+          <li><span class="trip-check">✓</span> Target evening hatches</li>
+          <li><span class="trip-check">✓</span> All equipment provided</li>
+          <li><span class="trip-check">✓</span> Expert instruction</li>
+          <li><span class="trip-check">✓</span> Seasonal availability</li>
+        </ul>
 
-          <div class="trip-meta">
-            <span class="trip-meta-item">
-              <span class="trip-meta-icon">⏱</span> 3 Hours
-            </span>
-            <span class="trip-meta-item">
-              <span class="trip-meta-icon">👥</span> 1–2 Anglers
-            </span>
+        <div class="trip-footer">
+          <div>
+            <p class="trip-price-label">Starting at</p>
+            <p class="trip-price">$275</p>
           </div>
-
-          <ul class="trip-features">
-            <li><span class="trip-check">✓</span> Target evening hatches</li>
-            <li><span class="trip-check">✓</span> All equipment provided</li>
-            <li><span class="trip-check">✓</span> Expert instruction</li>
-            <li><span class="trip-check">✓</span> Seasonal availability</li>
-          </ul>
-
-          <div class="trip-footer">
-            <div>
-              <p class="trip-price-label">Starting at</p>
-              <p class="trip-price">$275</p>
-            </div>
-            <a href="#contact" class="btn btn-primary trip-btn">Book Now</a>
-          </div>
+          <a href="#contact" class="btn btn-primary trip-btn">Book Now</a>
         </div>
       </article>
+
     </div>
 
     <p class="trip-disclaimer">
