@@ -416,9 +416,13 @@ a {
 
 /* PHOTO TESTIMONIAL CARDS */
 .testimonials-section {
-  background: #f5f7f6; /* soft neutral */
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 6rem !important;
+  padding-bottom: 6rem;
+}
+
+/* Add space between header and cards */
+.testimonials {
+  margin-top: 2rem;
 }
 
 .testimonial-card {
