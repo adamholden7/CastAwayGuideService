@@ -71,24 +71,14 @@ a {
 }
 
 .logo {
-  display: inline-flex;
-  flex-direction: column;
-  line-height: 1.1;
-  text-decoration: none;
-}
-
-.logo-title {
-  font-family: "Oswald", sans-serif;
-  font-size: 1.1rem;
-  letter-spacing: 0.12em;
+  font-family: "Oswald", system-ui, sans-serif;
+  font-size: 1.35rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--primary);
 }
 
-.logo-subtitle {
-  font-size: 0.55rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
+.logo span {
   color: var(--accent);
 }
 
