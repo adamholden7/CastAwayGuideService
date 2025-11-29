@@ -141,33 +141,44 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
   </div>
 </section> -->
 
-<div class="card-grid testimonials">
+{% if site.data.client.show_testimonials != false %}
+<section id="testimonials" class="section testimonials-section">
+  <div class="container">
+    <header class="section-header">
+      <h2>What Clients Are Saying</h2>
+    </header>
 
-  <article class="testimonial-card">
-    <img class="testimonial-img" src="{{ '/assets/images/gallery-1.jpg' | relative_url }}" alt="Client holding a fish on the Brule">
-    <div class="testimonial-body">
-      <p>“Hands down the best day I’ve had on the water. Learned a ton and landed my biggest fish yet.”</p>
-      <span class="testimonial-name">— Alex M.</span>
+    <div class="card-grid testimonials">
+
+      <article class="testimonial-card">
+        <img class="testimonial-img" src="{{ '/assets/images/gallery-1.jpg' | relative_url }}" alt="Client holding a fish on the Brule">
+        <div class="testimonial-body">
+          <p>“Hands down the best day I’ve had on the water. Learned a ton and landed my biggest fish yet.”</p>
+          <span class="testimonial-name">— Alex M.</span>
+        </div>
+      </article>
+
+      <article class="testimonial-card">
+        <img class="testimonial-img" src="{{ '/assets/images/gallery-2.jpg' | relative_url }}" alt="Client landing a steelhead">
+        <div class="testimonial-body">
+          <p>“Patient, dialed-in, and fun to be around. Perfect for my son’s first trip.”</p>
+          <span class="testimonial-name">— Jamie R.</span>
+        </div>
+      </article>
+
+      <article class="testimonial-card">
+        <img class="testimonial-img" src="{{ '/assets/images/gallery-3.jpg' | relative_url }}" alt="Client with a fall steelhead">
+        <div class="testimonial-body">
+          <p>“Knows where the fish are and explains the ‘why’ behind every move. I’ll be back every season.”</p>
+          <span class="testimonial-name">— Chris D.</span>
+        </div>
+      </article>
+
     </div>
-  </article>
+  </div>
+</section>
+{% endif %}
 
-  <article class="testimonial-card">
-    <img class="testimonial-img" src="{{ '/assets/images/gallery-2.jpg' | relative_url }}" alt="Client landing a steelhead">
-    <div class="testimonial-body">
-      <p>“Patient, dialed-in, and fun to be around. Perfect for my son’s first trip.”</p>
-      <span class="testimonial-name">— Jamie R.</span>
-    </div>
-  </article>
-
-  <article class="testimonial-card">
-    <img class="testimonial-img" src="{{ '/assets/images/gallery-3.jpg' | relative_url }}" alt="Client with a fall steelhead">
-    <div class="testimonial-body">
-      <p>“Knows where the fish are and explains the ‘why’ behind every move. I’ll be back every season.”</p>
-      <span class="testimonial-name">— Chris D.</span>
-    </div>
-  </article>
-
-</div>
 
 {% if site.data.client.show_booking_form != false %}
 <section id="contact" class="section section-accent">
