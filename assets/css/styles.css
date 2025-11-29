@@ -146,7 +146,7 @@ a {
   display: flex;
   align-items: center;
   color: var(--white);
-  background-image: url("../images/hero-river.jpg");
+  background-image: url("{{ '/images/hero-river.jpg' | relative_url }}");
   background-size: cover;
   background-position: center;
 }
