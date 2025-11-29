@@ -61,7 +61,7 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
     <div class="card-grid">
       <article class="card">
         <h3>Half-Day Wade Trip</h3>
-        <p class="card-price">$XXX</p>
+        <p class="card-price">$300</p>
         <p class="card-text">
           4–5 hours focused on a productive stretch of river. Perfect for learning new water
           or dialing in your technique.
@@ -75,7 +75,7 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
 
       <article class="card">
         <h3>Full-Day Drift</h3>
-        <p class="card-price">$XXX</p>
+        <p class="card-price">$500</p>
         <p class="card-text">
           8–9 hours floating prime sections of the Brule. Cover more water and target the best
           runs based on real-time conditions.
@@ -189,8 +189,8 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
         I’ll get back to you with availability and details.
       </p>
       <div class="contact-details">
-        <p><strong>Email:</strong> <a href="mailto:info@bruleguide.com">info@bruleguide.com</a></p>
-        <p><strong>Phone:</strong> <a href="tel:+1-555-555-5555">(555) 555-5555</a></p>
+        <p><strong>Email:</strong> <a href="mailto:info@castawayguide.com">info@castawayguide.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+1-218-591-2604">(218) 591-2604</a></p>
       </div>
     </div>
     <form class="contact-form">
