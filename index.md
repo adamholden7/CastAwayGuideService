@@ -29,8 +29,8 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
     <div class="about-text">
       <h2>Your Guide to the Brule</h2>
       <p>
-        Hey, I’m <strong>[Guide Name]</strong> — born and raised near the Brule. I’ve spent the last
-        [X] years learning this river in every season, chasing browns, brookies, and steelhead
+        Hey, I’m <strong>Brock</strong> — born and raised near the Brule. I’ve spent the last
+        7 years learning this river in every season, chasing browns, brookies, and steelhead
         from the headwaters to Lake Superior.
       </p>
       <p>
