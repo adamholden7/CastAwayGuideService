@@ -1,0 +1,18 @@
+business_name: "Cast Away Guide Service"
+tagline: "Guided fly fishing trips on Wisconsin's legendary Brule River."
+
+owner_name: "Jake Peterson"
+location: "Brule, Wisconsin"
+
+email: "info@castawayguides.com"
+phone: "(555) 555-5555"
+
+hero_headline: "Chase Wild Trout on the Legendary Brule"
+hero_subtext: "Custom half-day and full-day fly fishing trips with a local guide who knows every bend, riffle, and run."
+
+business_type: "guide"   # later: "bakery", "photography", etc.
+
+show_availability: true
+show_gallery: true
+show_blog: true
+show_booking_form: true
