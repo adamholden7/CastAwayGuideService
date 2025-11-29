@@ -201,6 +201,10 @@ a {
   opacity: 0.9;
 }
 
+.section-hero-bg {
+  background: #0f3f33; /* or whatever exact green your hero uses */
+}
+
 /* BUTTONS */
 .btn {
   display: inline-flex;
