@@ -14,31 +14,35 @@
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
 </head>
 <body>
+      <div class="top-bar">
       <div class="container top-bar-inner">
-    <div class="top-bar-left">
-      <span class="top-bar-item">
-        <span class="icon-phone">📞</span>
-        <a href="tel:{{ site.data.client.phone }}">{{ site.data.client.phone }}</a>
-      </span>
-  
-      <span class="top-bar-separator">•</span>
-  
-      <span class="top-bar-item">
-        <span class="icon-email">✉️</span>
-        <a href="mailto:{{ site.data.client.email }}">{{ site.data.client.email }}</a>
-      </span>
+    
+        <div class="top-bar-left">
+          <span class="top-bar-item">
+            📞 <a href="tel:{{ site.data.client.phone }}">{{ site.data.client.phone }}</a>
+          </span>
+          <span class="top-bar-separator">•</span>
+          <span class="top-bar-item">
+            ✉️ <a href="mailto:{{ site.data.client.email }}">{{ site.data.client.email }}</a>
+          </span>
+        </div>
+    
+        <div class="top-bar-right">
+          {% if site.data.client.social.facebook %}
+          <a href="{{ site.data.client.social.facebook }}" class="social-icon" target="_blank" aria-label="Facebook">
+            <img src="{{ '/assets/icons/facebook.svg' | relative_url }}" alt="Facebook">
+          </a>
+          {% endif %}
+    
+          {% if site.data.client.social.instagram %}
+          <a href="{{ site.data.client.social.instagram }}" class="social-icon" target="_blank" aria-label="Instagram">
+            <img src="{{ '/assets/icons/instagram.svg' | relative_url }}" alt="Instagram">
+          </a>
+          {% endif %}
+        </div>
+    
+      </div>
     </div>
-  
-    <div class="top-bar-right">
-      <a href="https://facebook.com" class="social-icon" aria-label="Facebook">
-        <img src="{{ '/assets/icons/facebook.svg' | relative_url }}" alt="Facebook" />
-      </a>
-      <a href="https://instagram.com" class="social-icon" aria-label="Instagram">
-        <img src="{{ '/assets/icons/instagram.svg' | relative_url }}" alt="Instagram" />
-      </a>
-    </div>
-  </div>
-
   <header class="site-header">
     <div class="container nav-container">
       <a href="{{ '/' | relative_url }}" class="logo">Castaway<span> Guide Service</span></a>
