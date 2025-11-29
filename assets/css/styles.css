@@ -48,6 +48,50 @@ a {
   padding: 0 1.5rem;
 }
 
+/* Top Bar */
+.top-bar {
+  background: #F7F9F8; /* soft light gray/green */
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  font-size: 0.85rem;
+  padding: 0.35rem 0;
+  color: var(--text-muted);
+}
+
+.top-bar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar-left,
+.top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.top-bar-item a {
+  color: var(--text-muted);
+}
+
+.top-bar-item a:hover {
+  color: var(--primary);
+}
+
+.top-bar-separator {
+  opacity: 0.4;
+}
+
+.social-icon {
+  color: var(--primary);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.social-icon:hover {
+  opacity: 0.7;
+  transform: scale(1.1);
+}
+
 /* HEADER / NAV */
 .site-header {
   position: sticky;
