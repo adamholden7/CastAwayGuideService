@@ -205,6 +205,11 @@ a {
   background: #0f3f33; /* or whatever exact green your hero uses */
 }
 
+.section-hero-bg .section-header h2,
+.section-hero-bg .section-header p {
+  color: #ffffff;
+}
+
 /* BUTTONS */
 .btn {
   display: inline-flex;
