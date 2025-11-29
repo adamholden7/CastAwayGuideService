@@ -153,13 +153,13 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
         <img src="{{ '/assets/images/gallery-1.jpg' | relative_url }}" alt="Angler landing a fish" />
       </figure>
       <figure class="gallery-item">
-        <img src="{{ '/assets/images/gallery-2.jpg' | relative_url }}" alt="Drift boat on a misty morning" />
+        <img src="{{ '/assets/images/gallery-2.jpg' | relative_url }}" alt="Angler landing a fish" />
       </figure>
       <figure class="gallery-item">
-        <img src="{{ '/assets/images/gallery-3.jpg' | relative_url }}" alt="Close-up of a trout" />
+        <img src="{{ '/assets/images/gallery-3.jpg' | relative_url }}" alt="Angler landing a fish" />
       </figure>
       <figure class="gallery-item">
-        <img src="{{ '/assets/images/gallery-4.jpg' | relative_url }}" alt="Brule River at sunset through the pines" />
+        <img src="{{ '/assets/images/gallery-4.jpg' | relative_url }}" alt="Angler landing a fish" />
       </figure>
     </div>
   </div>
