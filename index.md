@@ -21,7 +21,7 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
       {% endif %}
     </div>
     <div class="hero-meta">
-      <span>‣ Walk-and-wade &amp; drift boat options</span>
+      <span>‣ Walk-and-wade</span>
       <span>‣ All skill levels welcome</span>
       <span>‣ Gear available if needed</span>
     </div>
@@ -109,7 +109,7 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
 </section>
 {% endif %}
 
-<section id="river" class="section">
+<!-- <section id="river" class="section">
   <div class="container grid-2">
     <div>
       <h2>The Water</h2>
@@ -139,7 +139,7 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
       </p>
     </div>
   </div>
-</section>
+</section> -->
 
 {% if site.data.client.show_gallery != false %}
 <section id="gallery" class="section section-alt">
