@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Home
-description: {{ site.data.client.tagline | default: "Guided fly fishing trips on Wisconsin's Brule River – half-day and full-day adventures with a local guide." }}
+description: Guided fly fishing trips on Wisconsin's Brule River – half-day and full-day adventures with a local guide.
 ---
 
 <section id="hero" class="hero">
