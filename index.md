@@ -49,7 +49,7 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
     </div>
     <div class="about-media">
       <div class="about-card">
-        <img src="{{ '/images/guide-portrait.jpg' | relative_url }}" alt="Guide on the water" />
+        <img src="{{ '/assets/images/guide-portrait.jpg' | relative_url }}" alt="Guide on the water" />
       </div>
     </div>
   </div>
@@ -150,16 +150,16 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
     </header>
     <div class="gallery-grid">
       <figure class="gallery-item">
-        <img src="{{ '/images/gallery-1.jpg' | relative_url }}" alt="Angler landing a fish" />
+        <img src="{{ '/assets/images/gallery-1.jpg' | relative_url }}" alt="Angler landing a fish" />
       </figure>
       <figure class="gallery-item">
-        <img src="{{ '/images/gallery-2.jpg' | relative_url }}" alt="Boat on a misty morning" />
+        <img src="{{ '/assets/images/gallery-2.jpg' | relative_url }}" alt="Drift boat on a misty morning" />
       </figure>
       <figure class="gallery-item">
-        <img src="{{ '/images/gallery-3.jpg' | relative_url }}" alt="Close-up of a fish" />
+        <img src="{{ '/assets/images/gallery-3.jpg' | relative_url }}" alt="Close-up of a trout" />
       </figure>
       <figure class="gallery-item">
-        <img src="{{ '/images/gallery-4.jpg' | relative_url }}" alt="River at sunset through the trees" />
+        <img src="{{ '/assets/images/gallery-4.jpg' | relative_url }}" alt="Brule River at sunset through the pines" />
       </figure>
     </div>
   </div>
