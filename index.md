@@ -56,7 +56,7 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
 </section>
 
 {% if site.data.client.show_trips != false and site.data.client.business_type == "guide" %}
-<section id="trips" class="section section-alt">
+<section id="trips" class="hero">
   <div class="container">
     <header class="section-header">
       <h2>Trips &amp; Rates</h2>
@@ -142,7 +142,7 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
 </section> -->
 
 {% if site.data.client.show_gallery != false %}
-<section id="gallery" class="section section-alt">
+<section id="gallery" class="section">
   <div class="container">
     <header class="section-header">
       <h2>On the Water</h2>
@@ -167,7 +167,7 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
 {% endif %}
 
 {% if site.data.client.show_testimonials != false %}
-<section class="section">
+<section class="section section-alt">
   <div class="container">
     <header class="section-header">
       <h2>What Clients Are Saying</h2>
