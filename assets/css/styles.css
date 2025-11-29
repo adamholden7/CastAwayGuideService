@@ -50,7 +50,7 @@ a {
 
 /* Top Bar */
 .top-bar {
-  background: #F7F9F8; /* soft light gray/green */
+  background: #f8fafb;
   border-bottom: 1px solid rgba(0,0,0,0.05);
   font-size: 0.85rem;
   padding: 0.35rem 0;
@@ -59,8 +59,9 @@ a {
 
 .top-bar-inner {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;  /* THIS is key */
+  gap: 1rem;
 }
 
 .top-bar-left,
@@ -68,29 +69,38 @@ a {
   display: flex;
   align-items: center;
   gap: 1rem;
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+.top-bar-item {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
 }
 
 .top-bar-item a {
   color: var(--text-muted);
+  font-weight: 500;
 }
 
 .top-bar-item a:hover {
   color: var(--primary);
 }
 
-.top-bar-separator {
-  opacity: 0.4;
-}
-
-.social-icon {
-  color: var(--primary);
+/* Keep icons right aligned */
+.social-icon img {
+  width: 18px;
+  height: 18px;
+  display: block;
+  opacity: 0.8;
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.social-icon:hover {
-  opacity: 0.7;
+.social-icon:hover img {
+  opacity: 1;
   transform: scale(1.1);
 }
+
 
 /* HEADER / NAV */
 .site-header {
