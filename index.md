@@ -10,7 +10,7 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
     <p class="eyebrow">
       {{ site.data.client.tagline | default: "Guided fly fishing trips on Wisconsin's Brule River." }}
     </p>
-    <h1>{{ site.data.client.hero_headline | default: "Your Brule River Adventure Starts Here." }}</h1>
+    <h1>{{ site.data.client.hero_headline | default: "Your Brule River Adventure Starts Here" }}</h1>
     <p class="hero-text">
       {{ site.data.client.hero_subtext | default: "Custom half-day and full-day fly fishing trips with a local guide who knows every bend of the Brule." }}
     </p>
