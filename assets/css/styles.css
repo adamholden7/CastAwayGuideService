@@ -745,6 +745,135 @@ a {
     flex-direction: column;
   }
 
+  .section-light {
+  background: #f7faf9;
+}
+
+/* Meet your guide layout */
+
+.guide-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.3fr);
+  gap: 3rem;
+  align-items: center;
+}
+
+.guide-photo-card {
+  position: relative;
+  background: #faf4ec;
+  border-radius: 1.75rem;
+  padding: 0.75rem;
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.18);
+}
+
+.guide-photo-card img {
+  border-radius: 1.25rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.guide-badge {
+  position: absolute;
+  left: 1.5rem;
+  bottom: 1.5rem;
+  background: #0b3d2e;
+  color: #fff;
+  border-radius: 1rem;
+  padding: 0.75rem 1.05rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+  max-width: 240px;
+}
+
+.guide-badge-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin: 0 0 0.15rem;
+}
+
+.guide-badge-text {
+  font-size: 0.8rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.guide-content p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.guide-title {
+  font-family: "Oswald", system-ui, sans-serif;
+  font-size: 2.3rem;
+  margin: 0 0 1rem;
+}
+
+.guide-features {
+  list-style: none;
+  padding: 0;
+  margin: 1.2rem 0 0.5rem;
+}
+
+.guide-features li {
+  position: relative;
+  padding-left: 1.3rem;
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.guide-features li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0.05rem;
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+.guide-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.guide-stat {
+  min-width: 110px;
+}
+
+.guide-stat-number {
+  display: block;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--primary);
+}
+
+.guide-stat-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .guide-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .guide-photo-card {
+    order: -1;
+  }
+
+  .guide-badge {
+    left: 1rem;
+    right: 1rem;
+    max-width: none;
+  }
+}
+
   .hero-meta {
     flex-direction: column;
   }
