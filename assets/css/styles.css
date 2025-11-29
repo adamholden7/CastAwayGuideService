@@ -878,3 +878,163 @@ a {
     flex-direction: column;
   }
 }
+
+/* ABOUT / MEET YOUR GUIDE (modeled after Tailwind version) */
+
+.section-about {
+  background: #f4f1ec; /* light tan like the mock */
+}
+
+/* Grid layout similar to lg:grid-cols-2 gap-16 */
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.25fr);
+  gap: 4rem;
+  align-items: center;
+}
+
+/* Image side */
+.about-image-wrap {
+  position: relative;
+}
+
+.about-image-frame {
+  aspect-ratio: 4 / 5;
+  border-radius: 1.75rem;
+  overflow: hidden;
+  box-shadow: 0 32px 70px rgba(15, 23, 42, 0.4);
+  background: #eee;
+}
+
+.about-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Accent badge in corner */
+.about-accent-card {
+  position: absolute;
+  right: -1.5rem;
+  bottom: -1.5rem;
+  background: #1f4f43;
+  color: #fff;
+  padding: 1rem 1.2rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 22px 50px rgba(15, 23, 42, 0.5);
+  max-width: 14rem;
+}
+
+.about-accent-title {
+  font-family: "Oswald", system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 0 0.2rem;
+}
+
+.about-accent-text {
+  font-size: 0.85rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Content side */
+.eyebrow-accent {
+  color: #306e84;
+  letter-spacing: 0.3em;
+}
+
+.about-heading {
+  font-family: "Oswald", system-ui, sans-serif;
+  font-size: clamp(2.1rem, 3vw + 1rem, 2.8rem);
+  font-weight: 700;
+  color: #1e2d2a;
+  margin: 0 0 1.25rem;
+}
+
+.about-body {
+  color: rgba(30, 45, 42, 0.75);
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.about-body p {
+  margin-bottom: 0.9rem;
+}
+
+/* Stats grid */
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.25rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(30, 45, 42, 0.12);
+}
+
+.about-stat {
+  text-align: center;
+}
+
+.about-stat-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.4rem;
+  background: #e0ece8;
+  font-size: 1.2rem;
+}
+
+.about-stat-value {
+  font-family: "Oswald", system-ui, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f4f43;
+  margin: 0;
+}
+
+.about-stat-label {
+  margin: 0.1rem 0 0;
+  font-size: 0.82rem;
+  color: rgba(30, 45, 42, 0.7);
+}
+
+/* Responsive tweaks */
+@media (max-width: 1024px) {
+  .about-grid {
+    gap: 2.5rem;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-accent-card {
+    right: 0;
+    bottom: -1rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image-wrap {
+    order: -1;
+  }
+
+  .about-accent-card {
+    position: static;
+    margin-top: 0.75rem;
+    max-width: none;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+}
