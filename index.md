@@ -111,17 +111,6 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
       </p>
     </header>
 
-    <section id="trips" class="section section-trips">
-  <div class="container">
-    <header class="section-header">
-      <p class="section-eyebrow">Guided Experiences</p>
-      <h2>Trips &amp; Rates</h2>
-      <p class="section-subtitle">
-        Choose the experience that fits your schedule. All trips include quality
-        Sage and Orvis equipment, hand-tied flies, and expert instruction.
-      </p>
-    </header>
-
     <div class="trips-grid">
 
       <!-- Trip 1 -->
