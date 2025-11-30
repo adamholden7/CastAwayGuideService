@@ -1589,3 +1589,77 @@ a {
   }
 }
 
+/* ------------------------------
+   PHOTO CAROUSEL
+------------------------------ */
+
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 2rem;
+  border-radius: 1rem;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  height: 450px;
+  position: relative;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 1rem;
+}
+
+/* --- ARROWS --- */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.7rem;
+  line-height: 40px;
+  text-align: center;
+  z-index: 10;
+  transition: background 0.2s ease;
+}
+
+.carousel-btn:hover {
+  background: rgba(0,0,0,0.6);
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+/* --- DOTS --- */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 0.5rem;
+}
+
+.carousel-dots button {
+  width: 11px;
+  height: 11px;
+  border-ra
