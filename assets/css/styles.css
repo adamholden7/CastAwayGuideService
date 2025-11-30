@@ -218,8 +218,9 @@ a {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top, rgba(11, 61, 46, 0.2), transparent),
-    linear-gradient(to bottom, rgba(11, 61, 46, 0.86), rgba(11, 61, 46, 0.92));
+  background: none; 
+  /* background: radial-gradient(circle at top, rgba(11, 61, 46, 0.2), transparent), */
+    /* linear-gradient(to bottom, rgba(11, 61, 46, 0.86), rgba(11, 61, 46, 0.92)); */
 }
 
 .hero-content {
