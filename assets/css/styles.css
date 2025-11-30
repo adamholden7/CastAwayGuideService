@@ -234,6 +234,21 @@ a {
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
 }
 
+.hero-textbox {
+  background: rgba(0, 0, 0, 0.35);   /* translucent */
+  backdrop-filter: blur(8px);       /* beautiful glass effect */
+  padding: 2rem 2.5rem;
+  border-radius: 1.25rem;
+  max-width: 40rem;
+}
+
+.hero-textbox h1,
+.hero-textbox p,
+.hero-textbox span {
+  text-shadow: 0 2px 6px rgba(0,0,0,0.45);
+}
+
+
 
 .eyebrow {
   font-size: 0.8rem;
