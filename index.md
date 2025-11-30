@@ -113,16 +113,16 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
     <!-- Stats row -->
     <div class="river-stats">
       <div class="river-stat">
-        <p class="river-stat-number">52</p>
+        <p class="river-stat-number">44</p>
         <p class="river-stat-label">River Miles</p>
       </div>
       <div class="river-stat">
-        <p class="river-stat-number">5,000+</p>
-        <p class="river-stat-label">Fish Per Mile</p>
+        <p class="river-stat-number">328'</p>
+        <p class="river-stat-label">Feet of Elevation Drop</p>
       </div>
       <div class="river-stat">
-        <p class="river-stat-number">6</p>
-        <p class="river-stat-label">Species</p>
+        <p class="river-stat-number">5</p>
+        <p class="river-stat-label">Major Game Fish Species</p>
       </div>
       <div class="river-stat">
         <p class="river-stat-number">12</p>
