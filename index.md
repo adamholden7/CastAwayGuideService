@@ -98,7 +98,7 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
       <div class="about-video-card">
         <div class="about-video-inner">
           <iframe
-            src="https://www.youtube.com/watch?v=5nzWdxtBUGo"
+            src="https://www.youtube.com/embed/5nzWdxtBUGo"
             title="A day on the Brule with Brock"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
