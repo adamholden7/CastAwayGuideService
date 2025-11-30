@@ -210,7 +210,7 @@ a {
   display: flex;
   align-items: center;
   color: var(--white);
-  background-image: url("{{ '/assets/images/Brule-5.jpg' | relative_url }}");
+  background-image: url("{{ '/assets/images/Brule-6.jpg' | relative_url }}");
   background-size: cover;
   background-position: center;
 }
