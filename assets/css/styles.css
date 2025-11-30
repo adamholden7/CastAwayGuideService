@@ -218,8 +218,8 @@ a {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top, rgba(11, 61, 46, 0.2), transparent),
-  linear-gradient(to bottom, rgba(11, 61, 46, 0.86), rgba(11, 61, 46, 0.92)); 
+  background:
+  linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.35));
 }
 
 .hero-content {
