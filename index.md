@@ -244,110 +244,152 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
   </div>
 </section> -->
 
-{% if site.data.client.show_testimonials != false %}
-<section id="testimonials" class="section section-testimonials">
+{% if site.data.client.show_booking_form != false %}
+<section id="booking" class="section section-booking">
   <div class="container">
     <header class="section-header section-header-tight">
-      <p class="section-eyebrow">Happy Anglers</p>
-      <h2>What Clients Say</h2>
+      <p class="section-eyebrow">Ready to fish?</p>
+      <h2 class="about-heading">Book Your Adventure</h2>
       <p class="section-subtitle">
-        A few words from anglers who’ve spent a day on the Brule.
+        Select an available date and fill out the form below. I’ll get back to you within
+        24 hours to confirm your trip.
       </p>
     </header>
 
-    <div class="testimonials-grid">
-      <!-- Testimonial 1 -->
-      <article class="testimonial-card">
-        <div class="testimonial-top">
-          <div class="testimonial-stars">
-            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-          </div>
-          <div class="testimonial-quote-icon">❝</div>
-        </div>
+    <div class="booking-grid">
+      <!-- Calendar side -->
+      <div class="booking-card">
+        <h3 class="booking-card-title">Check Availability</h3>
 
-        <p class="testimonial-text">
-          "Hands down the best day I've had on the water. Learned a ton and landed
-          my biggest fish yet."
-        </p>
-
-        <div class="testimonial-footer">
-          <div class="testimonial-avatar">
-            <img src="{{ '/assets/images/testimonial-1.jpg' | relative_url }}" alt="Alex M.">
+        <div class="booking-calendar-wrapper">
+          <div class="booking-calendar-header">
+            <button
+              type="button"
+              class="calendar-nav calendar-nav-prev"
+              aria-label="Previous month"
+            >
+              ‹
+            </button>
+            <span class="calendar-month" id="calendar-month-label">November 2025</span>
+            <button
+              type="button"
+              class="calendar-nav calendar-nav-next"
+              aria-label="Next month"
+            >
+              ›
+            </button>
           </div>
-          <div class="testimonial-meta">
-            <p class="testimonial-name">Alex M.</p>
-            <p class="testimonial-location">Minneapolis, MN</p>
-            <p class="testimonial-trip">Full Day Float Trip</p>
-          </div>
-        </div>
-      </article>
 
-      <!-- Testimonial 2 -->
-      <article class="testimonial-card">
-        <div class="testimonial-top">
-          <div class="testimonial-stars">
-            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-          </div>
-          <div class="testimonial-quote-icon">❝</div>
-        </div>
+          <!-- Calendar grid is injected by JavaScript -->
+          <div class="booking-calendar" id="booking-calendar"></div>
 
-        <p class="testimonial-text">
-          "Patient, dialed-in, and fun to be around. Perfect for my son's first trip."
-        </p>
-
-        <div class="testimonial-footer">
-          <div class="testimonial-avatar">
-            <img src="{{ '/assets/images/testimonial-2.jpg' | relative_url }}" alt="Jamie R.">
-          </div>
-          <div class="testimonial-meta">
-            <p class="testimonial-name">Jamie R.</p>
-            <p class="testimonial-location">Duluth, MN</p>
-            <p class="testimonial-trip">Half Day Wade Trip</p>
+          <div class="calendar-legend">
+            <span><span class="legend-dot is-available"></span>Available</span>
+            <span><span class="legend-dot is-limited"></span>Limited</span>
+            <span><span class="legend-dot is-booked"></span>Booked</span>
           </div>
         </div>
-      </article>
-
-      <!-- Testimonial 3 -->
-      <article class="testimonial-card">
-        <div class="testimonial-top">
-          <div class="testimonial-stars">
-            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-          </div>
-          <div class="testimonial-quote-icon">❝</div>
-        </div>
-
-        <p class="testimonial-text">
-          "Knows where the fish are and explains the 'why' behind every move. I'll be back every season."
-        </p>
-
-        <div class="testimonial-footer">
-          <div class="testimonial-avatar">
-            <img src="{{ '/assets/images/testimonial-3.jpg' | relative_url }}" alt="Chris D.">
-          </div>
-          <div class="testimonial-meta">
-            <p class="testimonial-name">Chris D.</p>
-            <p class="testimonial-location">Madison, WI</p>
-            <p class="testimonial-trip">Evening Hatch Trip</p>
-          </div>
-        </div>
-      </article>
-    </div>
-
-    <div class="testimonial-trust-row">
-      <div class="trust-item">
-        <span class="trust-label">Orvis</span>
-        <span class="trust-subtext">Endorsed Guide</span>
       </div>
-      <div class="trust-item">
-        <span class="trust-label">4.9★</span>
-        <span class="trust-subtext">Google Reviews</span>
-      </div>
-      <div class="trust-item">
-        <span class="trust-label">TripAdvisor</span>
-        <span class="trust-subtext">Excellence Award</span>
-      </div>
-    </div>
-  </div>
+
+      <!-- Form side -->
+      <div class="booking-card">
+        <h3 class="booking-card-title">Request a Trip</h3>
+
+        <!-- Wrapper so we can toggle between form & success -->
+        <div class="booking-form-wrapper">
+
+          <!-- FORM STATE -->
+          <form class="booking-form" id="booking-form">
+            <div class="form-row-inline">
+              <div class="form-row">
+                <label for="name">Full Name *</label>
+                <input id="name" name="name" required />
+              </div>
+              <div class="form-row">
+                <label for="email">Email *</label>
+                <input id="email" name="email" type="email" required />
+              </div>
+            </div>
+
+            <div class="form-row-inline">
+              <div class="form-row">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" />
+              </div>
+              <div class="form-row">
+                <label for="group-size">Number of Anglers *</label>
+                <select id="group-size" name="group-size" required>
+                  <option value="">Select</option>
+                  <option value="1">1 angler</option>
+                  <option value="2">2 anglers</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row-inline">
+              <div class="form-row">
+                <label for="trip-type">Trip Type *</label>
+                <select id="trip-type" name="trip-type" required>
+                  <option value="">Select trip</option>
+                  <option value="half-day">Half Day Wade Trip</option>
+                  <option value="full-day">Full Day Float Trip</option>
+                  <option value="evening">Evening Hatch Trip</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <label for="experience">Experience Level</label>
+                <select id="experience" name="experience">
+                  <option value="">Select level</option>
+                  <option value="first-time">First time</option>
+                  <option value="some">Some experience</option>
+                  <option value="experienced">Experienced</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label for="date">Preferred Date</label>
+              <input id="date" name="date" type="date" />
+            </div>
+
+            <div class="form-row">
+              <label for="message">Message / Special Requests</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="Tell me about your goals for the trip, any special occasions, or questions you have..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary booking-submit">
+              <span>Send Request</span>
+            </button>
+
+            <p class="booking-note">
+              I typically respond within 24 hours. A 50% deposit is required to confirm
+              your date; remaining balance is due on the day of your trip.
+            </p>
+          </form>
+
+          <!-- SUCCESS STATE (hidden by default) -->
+          <div class="booking-success" id="booking-success">
+            <div class="booking-success-icon">
+              ✓
+            </div>
+            <h3 class="booking-success-title">Request Received!</h3>
+            <p class="booking-success-text">
+              Thanks for reaching out! I’ll get back to you within 24 hours to confirm your trip details.
+            </p>
+            <button type="button" class="btn booking-success-reset" id="booking-reset">
+              Submit Another Request
+            </button>
+          </div>
+        </div> <!-- /.booking-form-wrapper -->
+      </div> <!-- /.booking-card (form side) -->
+
+    </div> <!-- /.booking-grid -->
+  </div> <!-- /.container -->
 </section>
 {% endif %}
 
@@ -398,83 +440,99 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
         </div>
       </div>
 
-      <!-- Form side (unchanged) -->
-      <div class="booking-card">
-        <h3 class="booking-card-title">Request a Trip</h3>
+      <!-- Form side -->
+<div class="booking-card">
+  <h3 class="booking-card-title">Request a Trip</h3>
 
-        <form class="booking-form">
-          <div class="form-row-inline">
-            <div class="form-row">
-              <label for="name">Full Name *</label>
-              <input id="name" name="name" required />
-            </div>
-            <div class="form-row">
-              <label for="email">Email *</label>
-              <input id="email" name="email" type="email" required />
-            </div>
-          </div>
+  <!-- Wrapper so we can toggle between form & success -->
+  <div class="booking-form-wrapper">
 
-          <div class="form-row-inline">
-            <div class="form-row">
-              <label for="phone">Phone</label>
-              <input id="phone" name="phone" type="tel" />
-            </div>
-            <div class="form-row">
-              <label for="group-size">Number of Anglers *</label>
-              <select id="group-size" name="group-size" required>
-                <option value="">Select</option>
-                <option value="1">1 angler</option>
-                <option value="2">2 anglers</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-row-inline">
-            <div class="form-row">
-              <label for="trip-type">Trip Type *</label>
-              <select id="trip-type" name="trip-type" required>
-                <option value="">Select trip</option>
-                <option value="half-day">Half Day Wade Trip</option>
-                <option value="full-day">Full Day Float Trip</option>
-                <option value="evening">Evening Hatch Trip</option>
-              </select>
-            </div>
-            <div class="form-row">
-              <label for="experience">Experience Level</label>
-              <select id="experience" name="experience">
-                <option value="">Select level</option>
-                <option value="first-time">First time</option>
-                <option value="some">Some experience</option>
-                <option value="experienced">Experienced</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-row">
-            <label for="date">Preferred Date</label>
-            <input id="date" name="date" type="date" />
-          </div>
-
-          <div class="form-row">
-            <label for="message">Message / Special Requests</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="4"
-              placeholder="Tell me about your goals for the trip, any special occasions, or questions you have..."
-            ></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-primary booking-submit">
-            <span>Send Request</span>
-          </button>
-
-          <p class="booking-note">
-            I typically respond within 24 hours. A 50% deposit is required to confirm
-            your date; remaining balance is due on the day of your trip.
-          </p>
-        </form>
+    <!-- FORM STATE -->
+    <form class="booking-form" id="booking-form">
+      <div class="form-row-inline">
+        <div class="form-row">
+          <label for="name">Full Name *</label>
+          <input id="name" name="name" required />
+        </div>
+        <div class="form-row">
+          <label for="email">Email *</label>
+          <input id="email" name="email" type="email" required />
+        </div>
       </div>
+
+      <div class="form-row-inline">
+        <div class="form-row">
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" />
+        </div>
+        <div class="form-row">
+          <label for="group-size">Number of Anglers *</label>
+          <select id="group-size" name="group-size" required>
+            <option value="">Select</option>
+            <option value="1">1 angler</option>
+            <option value="2">2 anglers</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row-inline">
+        <div class="form-row">
+          <label for="trip-type">Trip Type *</label>
+          <select id="trip-type" name="trip-type" required>
+            <option value="">Select trip</option>
+            <option value="half-day">Half Day Wade Trip</option>
+            <option value="full-day">Full Day Float Trip</option>
+            <option value="evening">Evening Hatch Trip</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="experience">Experience Level</label>
+          <select id="experience" name="experience">
+            <option value="">Select level</option>
+            <option value="first-time">First time</option>
+            <option value="some">Some experience</option>
+            <option value="experienced">Experienced</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label for="date">Preferred Date</label>
+        <input id="date" name="date" type="date" />
+      </div>
+
+      <div class="form-row">
+        <label for="message">Message / Special Requests</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          placeholder="Tell me about your goals for the trip, any special occasions, or questions you have..."
+        ></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary booking-submit">
+        <span>Send Request</span>
+      </button>
+
+      <p class="booking-note">
+        I typically respond within 24 hours. A 50% deposit is required to confirm
+        your date; remaining balance is due on the day of your trip.
+      </p>
+    </form>
+
+    <!-- SUCCESS STATE (hidden by default) -->
+    <div class="booking-success" id="booking-success">
+      <div class="booking-success-icon">
+        ✓
+      </div>
+      <h3 class="booking-success-title">Request Received!</h3>
+      <p class="booking-success-text">
+        Thanks for reaching out! I’ll get back to you within 24 hours to confirm your trip details.
+      </p>
+      <button type="button" class="btn booking-success-reset" id="booking-reset">
+        Submit Another Request
+      </button>
     </div>
   </div>
 </section>
