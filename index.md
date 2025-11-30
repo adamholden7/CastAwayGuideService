@@ -345,22 +345,38 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
       </p>
     </header>
 
-    <div class="gallery-grid">
-      <figure class="gallery-item">
-        <img src="{{ '/assets/images/gallery-1.jpg' | relative_url }}" alt="Angler releasing a trout on the Brule River">
-      </figure>
-      <figure class="gallery-item">
-        <img src="{{ '/assets/images/gallery-2.jpg' | relative_url }}" alt="Scenic view of the Brule River and surrounding forest">
-      </figure>
-      <figure class="gallery-item">
-        <img src="{{ '/assets/images/gallery-3.jpg' | relative_url }}" alt="Drift boat positioned on a quiet bend of the river">
-      </figure>
-      <figure class="gallery-item">
-        <img src="{{ '/assets/images/gallery-4.jpg' | relative_url }}" alt="Close-up of a trout in the net">
-      </figure>
+    <!-- Carousel Wrapper -->
+    <div class="carousel">
+      <div class="carousel-track">
+
+        <div class="carousel-slide">
+          <img src="{{ '/assets/images/gallery-1.jpg' | relative_url }}" alt="">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="{{ '/assets/images/gallery-2.jpg' | relative_url }}" alt="">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="{{ '/assets/images/gallery-3.jpg' | relative_url }}" alt="">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="{{ '/assets/images/gallery-4.jpg' | relative_url }}" alt="">
+        </div>
+
+      </div>
+
+      <!-- Navigation arrows -->
+      <button class="carousel-btn prev">‹</button>
+      <button class="carousel-btn next">›</button>
+
+      <!-- Dots -->
+      <div class="carousel-dots"></div>
     </div>
   </div>
 </section>
+
 
 <!-- REVIEWS / TESTIMONIALS -->
 <section id="reviews" class="section section-testimonials">
