@@ -75,5 +75,40 @@
   </footer>
 
   <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const monthLabel = document.querySelector('.calendar-month');
+    const dateInput  = document.querySelector('#date');
+    const days       = document.querySelectorAll('.calendar-day.is-available');
+
+    if (!monthLabel || !dateInput || !days.length) return;
+
+    days.forEach(function (day) {
+      day.addEventListener('click', function () {
+        // Clear previous selection
+        days.forEach(function (d) {
+          d.classList.remove('is-selected');
+        });
+
+        // Mark this one selected
+        day.classList.add('is-selected');
+
+        // Build a date from the month label + day number
+        const monthText = monthLabel.textContent.trim(); // e.g., "November 2025"
+        const dayNumber = day.dataset.day || day.textContent.trim();
+        const dateString = monthText + ' ' + dayNumber; // "November 2025 29"
+        const parsedDate = new Date(dateString);
+
+        if (!isNaN(parsedDate.getTime())) {
+          const yyyy = parsedDate.getFullYear();
+          const mm   = String(parsedDate.getMonth() + 1).padStart(2, '0');
+          const dd   = String(parsedDate.getDate()).padStart(2, '0');
+          dateInput.value = `${yyyy}-${mm}-${dd}`;
+        }
+      });
+    });
+  });
+</script>
 </body>
 </html>
