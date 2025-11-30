@@ -95,6 +95,121 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
   </div>
 </section>
 
+<!-- The Brule River Section -->
+<section id="river" class="section section-river">
+  <div class="container">
+
+    <!-- Intro -->
+    <header class="section-header">
+      <p class="section-eyebrow">The Legendary</p>
+      <h2>Brule River</h2>
+      <p class="section-subtitle">
+        Known as the “River of Presidents,” the Brule has hosted anglers including Calvin Coolidge,
+        Dwight Eisenhower, and Herbert Hoover. This legendary Wisconsin trout stream offers
+        year-round fishing opportunities.
+      </p>
+    </header>
+
+    <!-- Stats row -->
+    <div class="river-stats">
+      <div class="river-stat">
+        <p class="river-stat-number">52</p>
+        <p class="river-stat-label">River Miles</p>
+      </div>
+      <div class="river-stat">
+        <p class="river-stat-number">5,000+</p>
+        <p class="river-stat-label">Fish Per Mile</p>
+      </div>
+      <div class="river-stat">
+        <p class="river-stat-number">6</p>
+        <p class="river-stat-label">Species</p>
+      </div>
+      <div class="river-stat">
+        <p class="river-stat-number">12</p>
+        <p class="river-stat-label">Months of Fishing</p>
+      </div>
+    </div>
+
+    <!-- Seasonal highlights -->
+    <h3 class="river-subheading">Seasonal Highlights</h3>
+
+    <div class="river-seasons">
+      <!-- Spring -->
+      <article class="river-season-card">
+        <div class="river-season-pill river-season-pill--spring">
+          <span>🌱 Spring</span>
+        </div>
+        <p class="river-season-dates">April – May</p>
+        <h4 class="river-season-title">Steelhead Run</h4>
+        <p class="river-season-text">
+          Experience legendary spring steelhead fishing as chrome-bright fish push up from
+          Lake Superior.
+        </p>
+        <div class="river-tags">
+          <span class="river-tag">Steelhead</span>
+          <span class="river-tag">Brown Trout</span>
+          <span class="river-tag">Brook Trout</span>
+        </div>
+      </article>
+
+      <!-- Summer -->
+      <article class="river-season-card">
+        <div class="river-season-pill river-season-pill--summer">
+          <span>☀️ Summer</span>
+        </div>
+        <p class="river-season-dates">June – August</p>
+        <h4 class="river-season-title">Hex Hatch</h4>
+        <p class="river-season-text">
+          Prime dry-fly season with prolific Hexagenia hatches. Long evenings and technical
+          surface eats.
+        </p>
+        <div class="river-tags">
+          <span class="river-tag">Brown Trout</span>
+          <span class="river-tag">Brook Trout</span>
+          <span class="river-tag">Rainbow Trout</span>
+        </div>
+      </article>
+
+      <!-- Fall -->
+      <article class="river-season-card">
+        <div class="river-season-pill river-season-pill--fall">
+          <span>🍂 Fall</span>
+        </div>
+        <p class="river-season-dates">September – November</p>
+        <h4 class="river-season-title">Salmon &amp; Steelhead</h4>
+        <p class="river-season-text">
+          Aggressive salmon and fresh steelhead meet peak fall color. Big fish and memorable days.
+        </p>
+        <div class="river-tags">
+          <span class="river-tag">King Salmon</span>
+          <span class="river-tag">Coho Salmon</span>
+          <span class="river-tag">Steelhead</span>
+          <span class="river-tag">Brown Trout</span>
+        </div>
+      </article>
+
+      <!-- Winter -->
+      <article class="river-season-card">
+        <div class="river-season-pill river-season-pill--winter">
+          <span>❄️ Winter</span>
+        </div>
+        <p class="river-season-dates">December – March</p>
+        <h4 class="river-season-title">Trophy Browns</h4>
+        <p class="river-season-text">
+          For the dedicated angler—cold, clear water and low pressure mean trophy-size
+          browns and solitude.
+        </p>
+        <div class="river-tags">
+          <span class="river-tag">Brown Trout</span>
+          <span class="river-tag">Steelhead</span>
+        </div>
+      </article>
+    </div>
+
+  </div>
+</section>
+
+
 {% if site.data.client.show_trips != false and site.data.client.business_type == "guide" %}
 <section id="trips" class="section section-trips">
   <div class="container">
