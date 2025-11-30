@@ -228,6 +228,13 @@ a {
   max-width: 640px;
 }
 
+.hero-content h1,
+.hero-content p,
+.hero-content .hero-meta span {
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+}
+
+
 .eyebrow {
   font-size: 0.8rem;
   letter-spacing: 0.25em;
