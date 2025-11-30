@@ -7,26 +7,33 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
 <section id="hero" class="hero">
   <div class="hero-overlay"></div>
   <div class="container hero-content">
-    <p class="eyebrow">
-      {{ site.data.client.tagline | default: "Guided fly fishing trips on Wisconsin's Brule River." }}
-    </p>
-    <h1>{{ site.data.client.hero_headline | default: "Your Brule River Adventure Starts Here" }}</h1>
-    <p class="hero-text">
-      {{ site.data.client.hero_subtext | default: "Custom half-day and full-day fly fishing trips with a local guide who knows every bend of the Brule." }}
-    </p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn btn-primary">Book a Trip</a>
-      {% if site.data.client.show_trips != false %}
-      <a href="#trips" class="btn btn-ghost">View Trips &amp; Rates</a>
-      {% endif %}
+
+    <div class="hero-textbox">
+      <p class="eyebrow">
+        {{ site.data.client.tagline }}
+      </p>
+
+      <h1>{{ site.data.client.hero_headline }}</h1>
+
+      <p class="hero-text">
+        {{ site.data.client.hero_subtext }}
+      </p>
+
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Book a Trip</a>
+        <a href="#trips" class="btn btn-ghost">View Trips & Rates</a>
+      </div>
+
+      <div class="hero-meta">
+        <span>‣ Walk-and-wade</span>
+        <span>‣ All skill levels welcome</span>
+        <span>‣ Gear available if needed</span>
+      </div>
     </div>
-    <div class="hero-meta">
-      <span>‣ Walk-and-wade</span>
-      <span>‣ All skill levels welcome</span>
-      <span>‣ Gear available if needed</span>
-    </div>
+
   </div>
 </section>
+
 
 <section id="about" class="section section-about">
   <div class="container about-grid">
