@@ -15,7 +15,7 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
       {{ site.data.client.hero_subtext | default: "Custom half-day and full-day fly fishing trips with a local guide who knows every bend of the Brule." }}
     </p>
     <div class="hero-actions">
-      <!-- changed #contact -> #booking so it also goes to the form -->
+      <!-- goes to booking form -->
       <a href="#booking" class="btn btn-primary">Book a Trip</a>
       {% if site.data.client.show_trips != false %}
       <a href="#trips" class="btn btn-ghost">View Trips &amp; Rates</a>
@@ -31,18 +31,18 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
 
 <section id="about" class="section section-about">
   <div class="container about-grid">
-     <!-- Video: Brock on the Brule -->
-      <div class="about-video-card">
-        <div class="about-video-inner">
-          <iframe
-            src="https://www.youtube.com/embed/5nzWdxtBUGo"
-            title="A day on the Brule with Brock"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
+    <!-- Video: Brock on the Brule -->
+    <div class="about-video-card">
+      <div class="about-video-inner">
+        <iframe
+          src="https://www.youtube.com/embed/5nzWdxtBUGo"
+          title="A day on the Brule with Brock"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
       </div>
+    </div>
 
     <!-- Content side -->
     <div class="about-copy">
@@ -117,16 +117,16 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
         <p class="river-stat-label">River Miles</p>
       </div>
       <div class="river-stat">
-        <p class="river-stat-number">328'</p>
-        <p class="river-stat-label">Feet of Elevation Drop</p>
+        <p class="river-stat-number">328 ft</p>
+        <p class="river-stat-label">Elevation Drop</p>
       </div>
       <div class="river-stat">
         <p class="river-stat-number">5</p>
-        <p class="river-stat-label">Major Game Fish Species</p>
+        <p class="river-stat-label">Game Fish Species</p>
       </div>
       <div class="river-stat">
-        <p class="river-stat-number">12</p>
-        <p class="river-stat-label">Months of Fishing</p>
+        <p class="river-stat-number">Year-Round</p>
+        <p class="river-stat-label">Fishing Seasons</p>
       </div>
     </div>
 
@@ -208,7 +208,6 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
 
   </div>
 </section>
-
 
 {% if site.data.client.show_trips != false and site.data.client.business_type == "guide" %}
 <section id="trips" class="section section-trips">
@@ -334,6 +333,121 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
   </div>
 </section>
 {% endif %}
+
+<!-- PHOTO GALLERY (matches #gallery in nav) -->
+<section id="gallery" class="section section-gallery">
+  <div class="container">
+    <header class="section-header">
+      <p class="section-eyebrow">On the Water</p>
+      <h2>Photos from the Brule</h2>
+      <p class="section-subtitle">
+        A few snapshots from recent days on the river – trout, boats, bends, and Northwoods scenery.
+      </p>
+    </header>
+
+    <div class="gallery-grid">
+      <figure class="gallery-item">
+        <img src="{{ '/assets/images/gallery-1.jpg' | relative_url }}" alt="Angler releasing a trout on the Brule River">
+      </figure>
+      <figure class="gallery-item">
+        <img src="{{ '/assets/images/gallery-2.jpg' | relative_url }}" alt="Scenic view of the Brule River and surrounding forest">
+      </figure>
+      <figure class="gallery-item">
+        <img src="{{ '/assets/images/gallery-3.jpg' | relative_url }}" alt="Drift boat positioned on a quiet bend of the river">
+      </figure>
+      <figure class="gallery-item">
+        <img src="{{ '/assets/images/gallery-4.jpg' | relative_url }}" alt="Close-up of a trout in the net">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS / TESTIMONIALS -->
+<section id="reviews" class="section section-testimonials">
+  <div class="container">
+    <header class="section-header section-header-tight">
+      <p class="section-eyebrow">Kind Words</p>
+      <h2>Recent Guest Reviews</h2>
+      <p class="section-subtitle">
+        A few notes from anglers who’ve spent a day (or three) chasing fish on the Brule with me.
+      </p>
+    </header>
+
+    <div class="testimonials-grid">
+      <!-- Review 1 -->
+      <article class="testimonial-card">
+        <div class="testimonial-top">
+          <div>
+            <div class="testimonial-quote-icon">“</div>
+            <p class="testimonial-text">
+              Brock put us on fish all day and was unbelievably patient with two beginners.
+              We left tired, happy, and already talking about next year.
+            </p>
+          </div>
+          <div class="testimonial-stars">★★★★★</div>
+        </div>
+
+        <div class="testimonial-footer">
+          <div class="testimonial-avatar">
+            <span class="testimonial-avatar-initials">AB</span>
+          </div>
+          <div class="testimonial-meta">
+            <p class="testimonial-name">Alex B.</p>
+            <p class="testimonial-location">First-time fly angler</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Review 2 -->
+      <article class="testimonial-card">
+        <div class="testimonial-top">
+          <div>
+            <div class="testimonial-quote-icon">“</div>
+            <p class="testimonial-text">
+              I’ve fished the Brule for years, but Brock showed me new water and new approaches.
+              Professional, easygoing, and completely dialed in to the river.
+            </p>
+          </div>
+          <div class="testimonial-stars">★★★★★</div>
+        </div>
+
+        <div class="testimonial-footer">
+          <div class="testimonial-avatar">
+            <span class="testimonial-avatar-initials">JM</span>
+          </div>
+          <div class="testimonial-meta">
+            <p class="testimonial-name">Jordan M.</p>
+            <p class="testimonial-location">Returning client</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Review 3 -->
+      <article class="testimonial-card">
+        <div class="testimonial-top">
+          <div>
+            <div class="testimonial-quote-icon">“</div>
+            <p class="testimonial-text">
+              From helping my son with his first cast to landing a steelhead at sunset, it was
+              exactly the kind of day on the water we were hoping for.
+            </p>
+          </div>
+          <div class="testimonial-stars">★★★★★</div>
+        </div>
+
+        <div class="testimonial-footer">
+          <div class="testimonial-avatar">
+            <span class="testimonial-avatar-initials">KH</span>
+          </div>
+          <div class="testimonial-meta">
+            <p class="testimonial-name">Kara H.</p>
+            <p class="testimonial-location">Family trip</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
 {% if site.data.client.show_booking_form != false %}
 <section id="booking" class="section section-booking">
