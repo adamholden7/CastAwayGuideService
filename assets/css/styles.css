@@ -1377,3 +1377,49 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+.booking-success {
+  display: none; /* hidden until form submits */
+  text-align: center;
+  padding: 2.5rem 1.5rem 1.75rem;
+}
+
+.booking-success-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 999px;
+  margin: 0 auto 1.5rem;
+  border: 2px solid rgba(34, 197, 94, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #16a34a; /* green check */
+  background: #f0fdf4;
+}
+
+.booking-success-title {
+  font-family: "Oswald", system-ui, sans-serif;
+  font-size: 1.8rem;
+  margin: 0 0 0.75rem;
+  color: #1e2d2a;
+}
+
+.booking-success-text {
+  margin: 0 0 1.75rem;
+  font-size: 0.98rem;
+  color: rgba(30, 45, 42, 0.75);
+}
+
+.booking-success-reset {
+  background: #ffffff;
+  color: #1e2d2a;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+  padding-inline: 1.8rem;
+}
+
+.booking-success-reset:hover {
+  background: #f9fafb;
+}
+
