@@ -263,5 +263,35 @@
     renderCalendar(currentYear, currentMonth);
   });
 </script>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('booking-form');
+    const success = document.getElementById('booking-success');
+    const resetBtn = document.getElementById('booking-reset');
+
+    if (!form || !success || !resetBtn) return;
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // You could hook up a real email service / backend here.
+      // For now we just show the success state.
+      form.style.display = 'none';
+      success.style.display = 'block';
+
+      // Optionally scroll to top of card
+      success.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    resetBtn.addEventListener('click', function () {
+      // Reset form fields
+      form.reset();
+      // Swap views back
+      success.style.display = 'none';
+      form.style.display = 'block';
+    });
+  });
+</script>
 </body>
 </html>
