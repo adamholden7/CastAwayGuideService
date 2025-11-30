@@ -30,21 +30,18 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
 
 <section id="about" class="section section-about">
   <div class="container about-grid">
-    <!-- Image side -->
-    <div class="about-image-wrap">
-      <div class="about-image-frame">
-        <img
-          src="{{ '/assets/images/guide-portrait.jpg' | relative_url }}"
-          alt="Brock Haugrud on the Brule River"
-        />
+     <!-- Video: Brock on the Brule -->
+      <div class="about-video-card">
+        <div class="about-video-inner">
+          <iframe
+            src="https://www.youtube.com/embed/5nzWdxtBUGo"
+            title="A day on the Brule with Brock"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
       </div>
-
-      <!-- Accent card -->
-      <div class="about-accent-card">
-        <p class="about-accent-title">Licensed &amp; Insured</p>
-        <p class="about-accent-text">Professional guide services since 2018</p>
-      </div>
-    </div>
 
     <!-- Content side -->
     <div class="about-copy">
@@ -93,20 +90,6 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
           <p class="about-stat-label">Licensed &amp; Insured</p>
         </div>
       </div>
-
-      <!-- Video: Brock on the Brule -->
-      <div class="about-video-card">
-        <div class="about-video-inner">
-          <iframe
-            src="https://www.youtube.com/embed/5nzWdxtBUGo"
-            title="A day on the Brule with Brock"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
