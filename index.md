@@ -257,30 +257,18 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
     </header>
 
     <div class="booking-grid">
+
       <!-- Calendar side -->
       <div class="booking-card">
         <h3 class="booking-card-title">Check Availability</h3>
 
         <div class="booking-calendar-wrapper">
           <div class="booking-calendar-header">
-            <button
-              type="button"
-              class="calendar-nav calendar-nav-prev"
-              aria-label="Previous month"
-            >
-              ‹
-            </button>
+            <button type="button" class="calendar-nav calendar-nav-prev" aria-label="Previous month">‹</button>
             <span class="calendar-month" id="calendar-month-label">November 2025</span>
-            <button
-              type="button"
-              class="calendar-nav calendar-nav-next"
-              aria-label="Next month"
-            >
-              ›
-            </button>
+            <button type="button" class="calendar-nav calendar-nav-next" aria-label="Next month">›</button>
           </div>
 
-          <!-- Calendar grid is injected by JavaScript -->
           <div class="booking-calendar" id="booking-calendar"></div>
 
           <div class="calendar-legend">
@@ -292,102 +280,100 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
       </div>
 
       <!-- Form side -->
-<div class="booking-card">
-  <h3 class="booking-card-title">Request a Trip</h3>
+      <div class="booking-card">
+        <h3 class="booking-card-title">Request a Trip</h3>
 
-  <!-- Wrapper so we can toggle between form & success -->
-  <div class="booking-form-wrapper">
+        <div class="booking-form-wrapper">
 
-    <!-- FORM STATE -->
-    <form class="booking-form" id="booking-form">
-      <div class="form-row-inline">
-        <div class="form-row">
-          <label for="name">Full Name *</label>
-          <input id="name" name="name" required />
-        </div>
-        <div class="form-row">
-          <label for="email">Email *</label>
-          <input id="email" name="email" type="email" required />
-        </div>
-      </div>
+          <!-- FORM -->
+          <form class="booking-form" id="booking-form">
+            <div class="form-row-inline">
+              <div class="form-row">
+                <label for="name">Full Name *</label>
+                <input id="name" name="name" required />
+              </div>
+              <div class="form-row">
+                <label for="email">Email *</label>
+                <input id="email" name="email" type="email" required />
+              </div>
+            </div>
 
-      <div class="form-row-inline">
-        <div class="form-row">
-          <label for="phone">Phone</label>
-          <input id="phone" name="phone" type="tel" />
-        </div>
-        <div class="form-row">
-          <label for="group-size">Number of Anglers *</label>
-          <select id="group-size" name="group-size" required>
-            <option value="">Select</option>
-            <option value="1">1 angler</option>
-            <option value="2">2 anglers</option>
-          </select>
-        </div>
-      </div>
+            <div class="form-row-inline">
+              <div class="form-row">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" />
+              </div>
+              <div class="form-row">
+                <label for="group-size">Number of Anglers *</label>
+                <select id="group-size" name="group-size" required>
+                  <option value="">Select</option>
+                  <option value="1">1 angler</option>
+                  <option value="2">2 anglers</option>
+                </select>
+              </div>
+            </div>
 
-      <div class="form-row-inline">
-        <div class="form-row">
-          <label for="trip-type">Trip Type *</label>
-          <select id="trip-type" name="trip-type" required>
-            <option value="">Select trip</option>
-            <option value="half-day">Half Day Wade Trip</option>
-            <option value="full-day">Full Day Float Trip</option>
-            <option value="evening">Evening Hatch Trip</option>
-          </select>
-        </div>
-        <div class="form-row">
-          <label for="experience">Experience Level</label>
-          <select id="experience" name="experience">
-            <option value="">Select level</option>
-            <option value="first-time">First time</option>
-            <option value="some">Some experience</option>
-            <option value="experienced">Experienced</option>
-          </select>
-        </div>
-      </div>
+            <div class="form-row-inline">
+              <div class="form-row">
+                <label for="trip-type">Trip Type *</label>
+                <select id="trip-type" name="trip-type" required>
+                  <option value="">Select trip</option>
+                  <option value="half-day">Half Day Wade Trip</option>
+                  <option value="full-day">Full Day Float Trip</option>
+                  <option value="evening">Evening Hatch Trip</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <label for="experience">Experience Level</label>
+                <select id="experience" name="experience">
+                  <option value="">Select level</option>
+                  <option value="first-time">First time</option>
+                  <option value="some">Some experience</option>
+                  <option value="experienced">Experienced</option>
+                </select>
+              </div>
+            </div>
 
-      <div class="form-row">
-        <label for="date">Preferred Date</label>
-        <input id="date" name="date" type="date" />
-      </div>
+            <div class="form-row">
+              <label for="date">Preferred Date</label>
+              <input id="date" name="date" type="date" />
+            </div>
 
-      <div class="form-row">
-        <label for="message">Message / Special Requests</label>
-        <textarea
-          id="message"
-          name="message"
-          rows="4"
-          placeholder="Tell me about your goals for the trip, any special occasions, or questions you have..."
-        ></textarea>
-      </div>
+            <div class="form-row">
+              <label for="message">Message / Special Requests</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell me about your goals for the trip, any special occasions, or questions you have..."></textarea>
+            </div>
 
-      <button type="submit" class="btn btn-primary booking-submit">
-        <span>Send Request</span>
-      </button>
+            <button type="submit" class="btn btn-primary booking-submit">
+              <span>Send Request</span>
+            </button>
 
-      <p class="booking-note">
-        I typically respond within 24 hours. A 50% deposit is required to confirm
-        your date; remaining balance is due on the day of your trip.
-      </p>
-    </form>
+            <p class="booking-note">
+              I typically respond within 24 hours. A 50% deposit is required to confirm
+              your date; remaining balance is due on the day of your trip.
+            </p>
+          </form>
 
-    <!-- SUCCESS STATE (hidden by default) -->
-    <div class="booking-success" id="booking-success">
-      <div class="booking-success-icon">
-        ✓
-      </div>
-      <h3 class="booking-success-title">Request Received!</h3>
-      <p class="booking-success-text">
-        Thanks for reaching out! I’ll get back to you within 24 hours to confirm your trip details.
-      </p>
-      <button type="button" class="btn booking-success-reset" id="booking-reset">
-        Submit Another Request
-      </button>
-    </div>
-  </div>
+          <!-- SUCCESS STATE -->
+          <div class="booking-success" id="booking-success">
+            <div class="booking-success-icon">✓</div>
+            <h3 class="booking-success-title">Request Received!</h3>
+            <p class="booking-success-text">
+              Thanks for reaching out! I’ll get back to you within 24 hours to confirm your trip details.
+            </p>
+            <button type="button" class="btn booking-success-reset" id="booking-reset">
+              Submit Another Request
+            </button>
+          </div>
+
+        </div> <!-- /.booking-form-wrapper -->
+      </div> <!-- /.booking-card -->
+
+    </div> <!-- /.booking-grid -->
+  </div> <!-- /.container -->
 </section>
 {% endif %}
+
 
 
 
