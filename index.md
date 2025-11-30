@@ -380,44 +380,59 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
             <span>Thu</span><span>Fri</span><span>Sat</span>
           </div>
 
-          <!-- This is just a static mock. You can adjust days as you like. -->
+          <!-- Week 1 -->
           <div class="calendar-row">
             <span class="calendar-day is-muted"></span>
             <span class="calendar-day is-muted"></span>
             <span class="calendar-day is-muted"></span>
             <span class="calendar-day is-muted"></span>
             <span class="calendar-day is-muted"></span>
-            <span class="calendar-day">1</span>
-            <span class="calendar-day">2</span>
+            <span class="calendar-day is-available" data-day="1">1</span>
+            <span class="calendar-day is-available" data-day="2">2</span>
           </div>
 
+          <!-- Week 2 -->
           <div class="calendar-row">
-            <span class="calendar-day">3</span><span class="calendar-day">4</span>
-            <span class="calendar-day">5</span><span class="calendar-day">6</span>
-            <span class="calendar-day">7</span><span class="calendar-day">8</span>
-            <span class="calendar-day is-unavailable">9</span>
+            <span class="calendar-day is-available" data-day="3">3</span>
+            <span class="calendar-day is-available" data-day="4">4</span>
+            <span class="calendar-day is-available" data-day="5">5</span>
+            <span class="calendar-day is-available" data-day="6">6</span>
+            <span class="calendar-day is-available" data-day="7">7</span>
+            <span class="calendar-day is-available" data-day="8">8</span>
+            <span class="calendar-day is-unavailable" data-day="9">9</span>
           </div>
 
+          <!-- Week 3 -->
           <div class="calendar-row">
-            <span class="calendar-day is-unavailable">10</span>
-            <span class="calendar-day">11</span><span class="calendar-day">12</span>
-            <span class="calendar-day">13</span><span class="calendar-day">14</span>
-            <span class="calendar-day">15</span><span class="calendar-day">16</span>
+            <span class="calendar-day is-unavailable" data-day="10">10</span>
+            <span class="calendar-day is-available" data-day="11">11</span>
+            <span class="calendar-day is-available" data-day="12">12</span>
+            <span class="calendar-day is-available" data-day="13">13</span>
+            <span class="calendar-day is-available" data-day="14">14</span>
+            <span class="calendar-day is-available" data-day="15">15</span>
+            <span class="calendar-day is-available" data-day="16">16</span>
           </div>
 
+          <!-- Week 4 -->
           <div class="calendar-row">
-            <span class="calendar-day">17</span><span class="calendar-day">18</span>
-            <span class="calendar-day">19</span><span class="calendar-day">20</span>
-            <span class="calendar-day">21</span><span class="calendar-day">22</span>
-            <span class="calendar-day">23</span>
+            <span class="calendar-day is-available" data-day="17">17</span>
+            <span class="calendar-day is-available" data-day="18">18</span>
+            <span class="calendar-day is-available" data-day="19">19</span>
+            <span class="calendar-day is-available" data-day="20">20</span>
+            <span class="calendar-day is-available" data-day="21">21</span>
+            <span class="calendar-day is-available" data-day="22">22</span>
+            <span class="calendar-day is-available" data-day="23">23</span>
           </div>
 
+          <!-- Week 5 -->
           <div class="calendar-row">
-            <span class="calendar-day">24</span><span class="calendar-day">25</span>
-            <span class="calendar-day">26</span><span class="calendar-day">27</span>
-            <span class="calendar-day">28</span>
-            <span class="calendar-day is-available is-selected">29</span>
-            <span class="calendar-day is-unavailable">30</span>
+            <span class="calendar-day is-available" data-day="24">24</span>
+            <span class="calendar-day is-available" data-day="25">25</span>
+            <span class="calendar-day is-available" data-day="26">26</span>
+            <span class="calendar-day is-available" data-day="27">27</span>
+            <span class="calendar-day is-available" data-day="28">28</span>
+            <span class="calendar-day is-available is-selected" data-day="29">29</span>
+            <span class="calendar-day is-unavailable" data-day="30">30</span>
           </div>
         </div>
 
@@ -508,4 +523,5 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
   </div>
 </section>
 {% endif %}
+
 
