@@ -110,5 +110,158 @@
     });
   });
 </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const calendarEl = document.getElementById('booking-calendar');
+    const monthLabel = document.getElementById('calendar-month-label');
+    const prevBtn = document.querySelector('.calendar-nav-prev');
+    const nextBtn = document.querySelector('.calendar-nav-next');
+    const dateInput = document.getElementById('date');
+
+    if (!calendarEl || !monthLabel) return;
+
+    // ---- CONFIG: availability map ----
+    // Keys are ISO dates (YYYY-MM-DD). Values: "available" | "limited" | "booked"
+    const availability = {
+      // January 2026
+      '2026-01-01': 'available',
+      '2026-01-02': 'available',
+      '2026-01-03': 'booked',
+      '2026-01-05': 'limited',
+      '2026-01-12': 'limited',
+      '2026-01-19': 'limited',
+      '2026-01-26': 'limited',
+      '2026-01-13': 'available',
+      '2026-01-14': 'available',
+      '2026-01-15': 'available',
+      '2026-01-16': 'available',
+      '2026-01-20': 'available',
+      '2026-01-21': 'available',
+      '2026-01-22': 'available',
+      '2026-01-23': 'available',
+      '2026-01-27': 'available',
+      '2026-01-28': 'available',
+      '2026-01-29': 'available',
+      '2026-01-30': 'available',
+      '2026-01-31': 'available',
+
+      // Example: February 2026 – all available except weekends
+      // Add/remove as you like:
+      '2026-02-01': 'booked',
+      '2026-02-02': 'booked'
+      // etc...
+    };
+
+    // start on January 2026 to match your mock
+    let currentYear = 2026;
+    let currentMonth = 0; // 0 = January, 11 = December
+
+    function formatMonthLabel(year, monthIndex) {
+      const dt = new Date(year, monthIndex, 1);
+      return dt.toLocaleDateString(undefined, { month: 'long', year: 'numeric' });
+    }
+
+    function isoDate(year, monthIndex, day) {
+      const mm = String(monthIndex + 1).padStart(2, '0');
+      const dd = String(day).padStart(2, '0');
+      return year + '-' + mm + '-' + dd;
+    }
+
+    function renderCalendar(year, monthIndex) {
+      calendarEl.innerHTML = '';
+
+      const firstDay = new Date(year, monthIndex, 1);
+      const startWeekday = firstDay.getDay(); // 0–6, Sun–Sat
+      const daysInMonth = new Date(year, monthIndex + 1, 0).getDate();
+
+      monthLabel.textContent = formatMonthLabel(year, monthIndex);
+
+      // Weekday header
+      const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+      weekdays.forEach(function (wd) {
+        const span = document.createElement('span');
+        span.className = 'calendar-weekday';
+        span.textContent = wd;
+        calendarEl.appendChild(span);
+      });
+
+      // Padding before day 1
+      for (let i = 0; i < startWeekday; i++) {
+        const pad = document.createElement('button');
+        pad.type = 'button';
+        pad.className = 'calendar-day is-empty';
+        pad.disabled = true;
+        calendarEl.appendChild(pad);
+      }
+
+      // Days
+      for (let day = 1; day <= daysInMonth; day++) {
+        const dateStr = isoDate(year, monthIndex, day);
+        const status = availability[dateStr] || null;
+
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.textContent = day;
+        btn.dataset.date = dateStr;
+        btn.classList.add('calendar-day');
+
+        if (status === 'available') {
+          btn.classList.add('is-available');
+        } else if (status === 'limited') {
+          btn.classList.add('is-limited');
+        } else if (status === 'booked') {
+          btn.classList.add('is-booked');
+          btn.disabled = true;
+        } else {
+          // No entry => treat as not bookable / muted
+          btn.classList.add('is-muted');
+          btn.disabled = true;
+        }
+
+        btn.addEventListener('click', function () {
+          if (btn.disabled) return;
+
+          // Clear previous selection
+          calendarEl
+            .querySelectorAll('.calendar-day.is-selected')
+            .forEach(function (el) {
+              el.classList.remove('is-selected');
+            });
+
+          btn.classList.add('is-selected');
+
+          // Push into <input type="date">
+          if (dateInput) {
+            dateInput.value = dateStr;
+          }
+        });
+
+        calendarEl.appendChild(btn);
+      }
+    }
+
+    // Nav buttons
+    prevBtn.addEventListener('click', function () {
+      currentMonth -= 1;
+      if (currentMonth < 0) {
+        currentMonth = 11;
+        currentYear -= 1;
+      }
+      renderCalendar(currentYear, currentMonth);
+    });
+
+    nextBtn.addEventListener('click', function () {
+      currentMonth += 1;
+      if (currentMonth > 11) {
+        currentMonth = 0;
+        currentYear += 1;
+      }
+      renderCalendar(currentYear, currentMonth);
+    });
+
+    // Initial render
+    renderCalendar(currentYear, currentMonth);
+  });
+</script>
 </body>
 </html>
