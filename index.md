@@ -15,7 +15,8 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
       {{ site.data.client.hero_subtext | default: "Custom half-day and full-day fly fishing trips with a local guide who knows every bend of the Brule." }}
     </p>
     <div class="hero-actions">
-      <a href="#contact" class="btn btn-primary">Book a Trip</a>
+      <!-- changed #contact -> #booking so it also goes to the form -->
+      <a href="#booking" class="btn btn-primary">Book a Trip</a>
       {% if site.data.client.show_trips != false %}
       <a href="#trips" class="btn btn-ghost">View Trips &amp; Rates</a>
       {% endif %}
@@ -133,7 +134,11 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
             <p class="trip-price-label">Starting at</p>
             <p class="trip-price">$325</p>
           </div>
-          <a href="#contact" class="btn btn-primary trip-btn">Book Now</a>
+          <a href="#booking"
+             class="btn btn-primary trip-btn"
+             data-trip="half-day">
+            Book Now
+          </a>
         </div>
       </article>
 
@@ -165,7 +170,11 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
             <p class="trip-price-label">Starting at</p>
             <p class="trip-price">$550</p>
           </div>
-          <a href="#contact" class="btn btn-primary trip-btn trip-btn-popular">Book Now</a>
+          <a href="#booking"
+             class="btn btn-primary trip-btn trip-btn-popular"
+             data-trip="full-day">
+            Book Now
+          </a>
         </div>
       </article>
 
@@ -194,7 +203,11 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
             <p class="trip-price-label">Starting at</p>
             <p class="trip-price">$275</p>
           </div>
-          <a href="#contact" class="btn btn-primary trip-btn">Book Now</a>
+          <a href="#booking"
+             class="btn btn-primary trip-btn"
+             data-trip="evening">
+            Book Now
+          </a>
         </div>
       </article>
 
@@ -206,38 +219,6 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
   </div>
 </section>
 {% endif %}
-
-<!-- <section id="river" class="section">
-  <div class="container grid-2">
-    <div>
-      <h2>The Water</h2>
-      <p>
-        The local water here is a classic fishery — cold, clean, and full of structure that fish love.
-        From pocket water and riffles to deep pools, there’s always something to explore.
-      </p>
-      <p>
-        From delicate dry-fly fishing in summer to powerful runs in the fall and spring, there’s always something
-        happening out here.
-      </p>
-      <ul class="feature-list">
-        <li>Wild and stocked trout</li>
-        <li>Seasonal runs and special windows</li>
-        <li>Classic Northwoods scenery</li>
-      </ul>
-    </div>
-    <div class="river-panel">
-      <h3>Seasonal Highlights</h3>
-      <ul class="season-list">
-        <li><span>April–May:</span> Spring fish &amp; early hatches</li>
-        <li><span>June–August:</span> Dry flies, terrestrials &amp; evening trips</li>
-        <li><span>September–November:</span> Fall colors &amp; big fish</li>
-      </ul>
-      <p class="river-note">
-        For current conditions and availability, reach out and I’ll let you know what’s fishing best.
-      </p>
-    </div>
-  </div>
-</section> -->
 
 {% if site.data.client.show_booking_form != false %}
 <section id="booking" class="section section-booking">
@@ -368,6 +349,3 @@ description: Guided fly fishing trips on Wisconsin's Brule River – half-day an
   </div> <!-- /.container -->
 </section>
 {% endif %}
-
-
-
