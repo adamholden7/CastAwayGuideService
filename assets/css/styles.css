@@ -1608,16 +1608,15 @@ a {
 
 .carousel-slide {
   min-width: 100%;
-  height: 600px;    /* Increase this (500–700px usually works great) */
-  position: relative;
+  height: 500px;
+  background: #000;    /* optional letterbox color */
 }
 
 .carousel-slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;   /* keeps quality */
-  object-position: center; 
-  display: block;
+  object-fit: contain; /* shows full image */
+  padding: 10px;
   border-radius: 1rem;
 }
 
