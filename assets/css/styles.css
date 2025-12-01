@@ -1608,18 +1608,19 @@ a {
 
 .carousel-slide {
   min-width: 100%;
-  height: 380px;           /* was 450px – a bit shorter helps */
+  height: 600px;    /* Increase this (500–700px usually works great) */
   position: relative;
 }
 
 .carousel-slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center 20%;  /* <-- shift framing up to keep heads in */
+  object-fit: cover;   /* keeps quality */
+  object-position: center; 
   display: block;
   border-radius: 1rem;
 }
+
 
 @media (max-width: 768px) {
   .carousel-slide {
